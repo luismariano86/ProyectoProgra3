@@ -1,6 +1,5 @@
 ﻿Imports _03Entidades
 Imports _01AccesoDatos
-
 Public Class EmpleadoLN
 
     Public Sub New()

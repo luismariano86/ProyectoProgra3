@@ -60,7 +60,7 @@ Partial Class frmMenu
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuCatalogDatos, Me.mnuProcesos, Me.mnuReportes, Me.mnuAcercaDe, Me.mnuSalir})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(551, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(534, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -105,13 +105,13 @@ Partial Class frmMenu
         'mnuPréstamo
         '
         Me.mnuPréstamo.Name = "mnuPréstamo"
-        Me.mnuPréstamo.Size = New System.Drawing.Size(134, 22)
+        Me.mnuPréstamo.Size = New System.Drawing.Size(152, 22)
         Me.mnuPréstamo.Text = "Préstamo"
         '
         'mnuDevolucion
         '
         Me.mnuDevolucion.Name = "mnuDevolucion"
-        Me.mnuDevolucion.Size = New System.Drawing.Size(134, 22)
+        Me.mnuDevolucion.Size = New System.Drawing.Size(152, 22)
         Me.mnuDevolucion.Text = "Devolución"
         '
         'mnuReportes
@@ -148,30 +148,30 @@ Partial Class frmMenu
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel2, Me.sslblFecha})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 380)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 391)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(551, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(534, 22)
         Me.StatusStrip1.TabIndex = 1
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(178, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(173, 17)
         Me.ToolStripStatusLabel1.Spring = True
         Me.ToolStripStatusLabel1.Text = "ToolStripStatusLabel1"
         '
         'ToolStripStatusLabel2
         '
         Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(178, 17)
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(173, 17)
         Me.ToolStripStatusLabel2.Spring = True
         Me.ToolStripStatusLabel2.Text = "ToolStripStatusLabel2"
         '
         'sslblFecha
         '
         Me.sslblFecha.Name = "sslblFecha"
-        Me.sslblFecha.Size = New System.Drawing.Size(178, 17)
+        Me.sslblFecha.Size = New System.Drawing.Size(173, 17)
         Me.sslblFecha.Spring = True
         Me.sslblFecha.Text = "ToolStripStatusLabel3"
         '
@@ -180,7 +180,7 @@ Partial Class frmMenu
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbtnLibros, Me.ToolStripSeparator3, Me.tsbtnDevolucion, Me.tsbtnPrestamo, Me.ToolStripSeparator1, Me.ToolStripButton1, Me.tsbtnUsuarios, Me.ToolStripSeparator2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(551, 38)
+        Me.ToolStrip1.Size = New System.Drawing.Size(534, 38)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -248,7 +248,7 @@ Partial Class frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(551, 402)
+        Me.ClientSize = New System.Drawing.Size(534, 413)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)

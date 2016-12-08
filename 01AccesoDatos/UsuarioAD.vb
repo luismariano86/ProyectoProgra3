@@ -21,10 +21,10 @@ Public Class UsuarioAD
 
             cmdUsuario.Parameters.Add("@Login", OleDbType.VarChar).Value = pUsuario.Login
             cmdUsuario.Parameters.Add("@Clave", OleDbType.VarChar).Value = pUsuario.Clave
-            cmdUsuario.Parameters.Add("@NombreCompleto", OleDbType.Date).Value = pUsuario.Nombre
-            cmdUsuario.Parameters.Add("@indAdministrador", OleDbType.Integer).Value = pUsuario.Administrador
-            cmdUsuario.Parameters.Add("@indBibliotecario", OleDbType.Double).Value = pUsuario.Bibliotecario
-            cmdUsuario.Parameters.Add("@indActivo", OleDbType.Boolean).Value = pUsuario.Activo
+            cmdUsuario.Parameters.Add("@NombreCompleto", OleDbType.Date).Value = pUsuario.NombreCompleto
+            cmdUsuario.Parameters.Add("@indAdministrador", OleDbType.Integer).Value = pUsuario.IndAdministrador
+            cmdUsuario.Parameters.Add("@indBibliotecario", OleDbType.Double).Value = pUsuario.IndBibliotecario
+            cmdUsuario.Parameters.Add("@indActivo", OleDbType.Boolean).Value = pUsuario.IndActivo
 
             cmdUsuario.ExecuteNonQuery()
 
@@ -46,10 +46,10 @@ Public Class UsuarioAD
             Dim cmdUsuario As New OleDbCommand(SQL_UPDATE_USUARIO, miConexion)
 
             cmdUsuario.Parameters.Add("@Clave", OleDbType.VarChar).Value = pUsuario.Clave
-            cmdUsuario.Parameters.Add("@NombreCompleto", OleDbType.Date).Value = pUsuario.Nombre
-            cmdUsuario.Parameters.Add("@indAdministrador", OleDbType.Integer).Value = pUsuario.Administrador
-            cmdUsuario.Parameters.Add("@indBibliotecario", OleDbType.Double).Value = pUsuario.Bibliotecario
-            cmdUsuario.Parameters.Add("@indActivo", OleDbType.Boolean).Value = pUsuario.Activo
+            cmdUsuario.Parameters.Add("@NombreCompleto", OleDbType.Date).Value = pUsuario.NombreCompleto
+            cmdUsuario.Parameters.Add("@indAdministrador", OleDbType.Integer).Value = pUsuario.IndAdministrador
+            cmdUsuario.Parameters.Add("@indBibliotecario", OleDbType.Double).Value = pUsuario.IndBibliotecario
+            cmdUsuario.Parameters.Add("@indActivo", OleDbType.Boolean).Value = pUsuario.IndActivo
             cmdUsuario.Parameters.Add("@Login", OleDbType.VarChar).Value = pUsuario.Login
 
             cmdUsuario.ExecuteNonQuery()
@@ -99,10 +99,10 @@ Public Class UsuarioAD
                 miUser = New UsuarioEN
                 miUser.Login = drUsuario("Login")
                 miUser.Clave = drUsuario("Clave")
-                miUser.Nombre = drUsuario("NombreCompleto")
-                miUser.Bibliotecario = drUsuario("indBibliotecario")
-                miUser.Administrador = drUsuario("indAdministrador")
-                miUser.Activo = drUsuario("indActivo")
+                miUser.NombreCompleto = drUsuario("NombreCompleto")
+                miUser.IndBibliotecario = drUsuario("indBibliotecario")
+                miUser.IndAdministrador = drUsuario("indAdministrador")
+                miUser.IndActivo = drUsuario("indActivo")
             End While
             drUsuario.Close()
             miConexion.Close()
@@ -132,10 +132,10 @@ Public Class UsuarioAD
                 Dim miUser As New UsuarioEN
                 miUser.Login = drUsuario("Login")
                 miUser.Clave = drUsuario("Clave")
-                miUser.Nombre = drUsuario("Nombre_Completo")
-                miUser.Bibliotecario = drUsuario("Ind_Bibliotecario")
-                miUser.Administrador = drUsuario("Ind_Administrador")
-                miUser.Activo = drUsuario("Ind_Activo")
+                miUser.NombreCompleto = drUsuario("Nombre_Completo")
+                miUser.IndBibliotecario = drUsuario("Ind_Bibliotecario")
+                miUser.IndAdministrador = drUsuario("Ind_Administrador")
+                miUser.IndActivo = drUsuario("Ind_Activo")
                 lstUsuarios.Add(miUser)
             End While
             drUsuario.Close()

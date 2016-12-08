@@ -68,7 +68,7 @@
             Return _Clave
         End Get
     End Property
-    Public Property Nombre As String
+    Public Property NombreCompleto As String
         Set(value As String)
             _NombreCompleto = value
         End Set
@@ -76,7 +76,7 @@
             Return _NombreCompleto
         End Get
     End Property
-    Public Property Bibliotecario As Boolean
+    Public Property IndBibliotecario As Boolean
         Set(value As Boolean)
             _IndAdministrador = value
         End Set
@@ -84,7 +84,7 @@
             Return _IndAdministrador
         End Get
     End Property
-    Public Property Administrador As Boolean
+    Public Property IndAdministrador As Boolean
         Set(value As Boolean)
             _IndBibliotecario = value
         End Set
@@ -92,7 +92,7 @@
             Return _IndBibliotecario
         End Get
     End Property
-    Public Property Activo As Boolean
+    Public Property IndActivo As Boolean
         Set(value As Boolean)
             _IndActivo = value
         End Set

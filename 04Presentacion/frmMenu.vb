@@ -15,7 +15,7 @@
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         sslblFecha.Text = Date.Today.ToLongDateString
 
-        If user.Bibliotecario Then
+        If user.IndBibliotecario Then
             mnuPrestamosFechas.Enabled = False
         End If
 
