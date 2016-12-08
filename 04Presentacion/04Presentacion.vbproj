@@ -84,6 +84,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsReportes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsReportes.vb">
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmLibro.Designer.vb">
       <DependentUpon>frmLibro.vb</DependentUpon>
     </Compile>

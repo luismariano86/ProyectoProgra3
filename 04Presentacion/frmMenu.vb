@@ -33,7 +33,7 @@
         Dim dstDatosReporte As New DataSet
 
         'La consulta para obtener los datos: Cedula y Nombre_Completo que serían campos de una posible tabla llamada CLIENTE
-        Dim strConsulta As String = "SELECT Cedula, Nombre, FechaIngreso, Horas, PrecioHora, IndActivo FROM Empleado"
+        Dim strConsulta As String = "SELECT Login, Clave, NombreCompleto, indAdministrador, indBibliotecario, indActivo FROM USUARIOS"
 
         'Se prepara el adaptador para indicarle cual consulta tiene que realizar y la base de datos donde la va a realizar.
         Dim adpLista As New OleDb.OleDbDataAdapter(strConsulta, miConexion)
@@ -48,9 +48,15 @@
         Pantalla.Text = “Listado de Empleados”
         Pantalla.ShowDialog()
 
+    End Sub
 
+    Private Sub mnuUsuarios_Click(sender As Object, e As EventArgs) Handles mnuUsuarios.Click
+        Dim Pantalla As New frmUsuario
+        Pantalla.Show()
+    End Sub
 
-
-
+    Private Sub tsbtnUsuarios_Click(sender As Object, e As EventArgs) Handles tsbtnUsuarios.Click
+        Dim Pantalla As New frmUsuario
+        Pantalla.Show()
     End Sub
 End Class

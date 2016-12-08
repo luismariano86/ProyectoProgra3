@@ -28,28 +28,28 @@ Partial Class frmMenu
         Me.mnuAutores = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCientes = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuLibros = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuUsuarios = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuProcesos = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPréstamo = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuDevolucion = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuReportes = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPrestamosFechas = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuLibrosXAutor = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuAcercaDe = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuSalir = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.sslblFecha = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.tsbtnLibros = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.tsbtnDevolucion = New System.Windows.Forms.ToolStripButton()
         Me.tsbtnPrestamo = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbtnDevolucion = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbtnLibros = New System.Windows.Forms.ToolStripButton()
-        Me.mnuUsuarios = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuAcercaDe = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbtnUsuarios = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -89,6 +89,12 @@ Partial Class frmMenu
         Me.mnuLibros.Size = New System.Drawing.Size(152, 22)
         Me.mnuLibros.Text = "Libros"
         '
+        'mnuUsuarios
+        '
+        Me.mnuUsuarios.Name = "mnuUsuarios"
+        Me.mnuUsuarios.Size = New System.Drawing.Size(152, 22)
+        Me.mnuUsuarios.Text = "Usuarios"
+        '
         'mnuProcesos
         '
         Me.mnuProcesos.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuPréstamo, Me.mnuDevolucion})
@@ -99,13 +105,13 @@ Partial Class frmMenu
         'mnuPréstamo
         '
         Me.mnuPréstamo.Name = "mnuPréstamo"
-        Me.mnuPréstamo.Size = New System.Drawing.Size(152, 22)
+        Me.mnuPréstamo.Size = New System.Drawing.Size(134, 22)
         Me.mnuPréstamo.Text = "Préstamo"
         '
         'mnuDevolucion
         '
         Me.mnuDevolucion.Name = "mnuDevolucion"
-        Me.mnuDevolucion.Size = New System.Drawing.Size(152, 22)
+        Me.mnuDevolucion.Size = New System.Drawing.Size(134, 22)
         Me.mnuDevolucion.Text = "Devolución"
         '
         'mnuReportes
@@ -126,6 +132,12 @@ Partial Class frmMenu
         Me.mnuLibrosXAutor.Name = "mnuLibrosXAutor"
         Me.mnuLibrosXAutor.Size = New System.Drawing.Size(198, 22)
         Me.mnuLibrosXAutor.Text = "Libros de un Autor"
+        '
+        'mnuAcercaDe
+        '
+        Me.mnuAcercaDe.Name = "mnuAcercaDe"
+        Me.mnuAcercaDe.Size = New System.Drawing.Size(80, 20)
+        Me.mnuAcercaDe.Text = "Acerca de..."
         '
         'mnuSalir
         '
@@ -172,6 +184,29 @@ Partial Class frmMenu
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
         '
+        'tsbtnLibros
+        '
+        Me.tsbtnLibros.Image = CType(resources.GetObject("tsbtnLibros.Image"), System.Drawing.Image)
+        Me.tsbtnLibros.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbtnLibros.Name = "tsbtnLibros"
+        Me.tsbtnLibros.Size = New System.Drawing.Size(43, 35)
+        Me.tsbtnLibros.Text = "Libros"
+        Me.tsbtnLibros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 38)
+        '
+        'tsbtnDevolucion
+        '
+        Me.tsbtnDevolucion.Image = CType(resources.GetObject("tsbtnDevolucion.Image"), System.Drawing.Image)
+        Me.tsbtnDevolucion.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbtnDevolucion.Name = "tsbtnDevolucion"
+        Me.tsbtnDevolucion.Size = New System.Drawing.Size(71, 35)
+        Me.tsbtnDevolucion.Text = "Devolución"
+        Me.tsbtnDevolucion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
         'tsbtnPrestamo
         '
         Me.tsbtnPrestamo.Image = CType(resources.GetObject("tsbtnPrestamo.Image"), System.Drawing.Image)
@@ -186,41 +221,6 @@ Partial Class frmMenu
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 38)
         '
-        'tsbtnDevolucion
-        '
-        Me.tsbtnDevolucion.Image = CType(resources.GetObject("tsbtnDevolucion.Image"), System.Drawing.Image)
-        Me.tsbtnDevolucion.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbtnDevolucion.Name = "tsbtnDevolucion"
-        Me.tsbtnDevolucion.Size = New System.Drawing.Size(71, 35)
-        Me.tsbtnDevolucion.Text = "Devolución"
-        Me.tsbtnDevolucion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
-        '
-        'tsbtnLibros
-        '
-        Me.tsbtnLibros.Image = CType(resources.GetObject("tsbtnLibros.Image"), System.Drawing.Image)
-        Me.tsbtnLibros.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbtnLibros.Name = "tsbtnLibros"
-        Me.tsbtnLibros.Size = New System.Drawing.Size(43, 35)
-        Me.tsbtnLibros.Text = "Libros"
-        Me.tsbtnLibros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'mnuUsuarios
-        '
-        Me.mnuUsuarios.Name = "mnuUsuarios"
-        Me.mnuUsuarios.Size = New System.Drawing.Size(152, 22)
-        Me.mnuUsuarios.Text = "Usuarios"
-        '
-        'mnuAcercaDe
-        '
-        Me.mnuAcercaDe.Name = "mnuAcercaDe"
-        Me.mnuAcercaDe.Size = New System.Drawing.Size(80, 20)
-        Me.mnuAcercaDe.Text = "Acerca de..."
-        '
         'ToolStripButton1
         '
         Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
@@ -230,11 +230,6 @@ Partial Class frmMenu
         Me.ToolStripButton1.Text = "Clientes"
         Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 38)
-        '
         'tsbtnUsuarios
         '
         Me.tsbtnUsuarios.Image = CType(resources.GetObject("tsbtnUsuarios.Image"), System.Drawing.Image)
@@ -243,6 +238,11 @@ Partial Class frmMenu
         Me.tsbtnUsuarios.Size = New System.Drawing.Size(56, 35)
         Me.tsbtnUsuarios.Text = "Usuarios"
         Me.tsbtnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
         '
         'frmMenu
         '
