@@ -8,7 +8,25 @@ Public Class UsuarioLN
 
     Public Sub InsertarUsuario(ByVal pUsuario As UsuarioEN)
         Try
+            If (pEmpleado.Cedula.Trim().Length = 0) Then
+                Throw New Exception("La Cedula es obligatoria")
+            ElseIf pEmpleado.Cedula.Trim().Length < 9 Then
+                Throw New Exception("Caracteres minimos son 9")
+            ElseIf pEmpleado.Cedula.Trim().Length > 15 Then
+                Throw New Exception("Cèdula de Maximos 15 caracteres")
+            ElseIf String.IsNullOrWhiteSpace(pEmpleado.NombreCompleto) Then
+                Throw New Exception("Nombre es obligatorio")
+            ElseIf pEmpleado.HorasTrabajadas <= 0 Then
+                Throw New Exception("Horas debe ser mayor a CERO")
+            ElseIf pEmpleado.FechaIngreso > Date.Today Then
+                Throw New Exception("La fecha no puede ser mayor a hoy")
+            End If
 
+            Dim EmpAD As New EmpleadoAD
+            If Not IsNothing(EmpAD.ObtenerEmpleadoPorCedula(pEmpleado.Cedula)) Then
+                Throw New Exception("YA EXISTE")
+            End If
+            EmpAD.InsertarEmpleado(pEmpleado)
 
         Catch ex As Exception
             Throw New Exception(ex.Message)
