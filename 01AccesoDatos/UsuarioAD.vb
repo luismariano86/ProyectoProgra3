@@ -1,20 +1,18 @@
 ﻿Imports _03Entidades
 Imports System.Data.OleDb
-'Imports System.Data.SqlClient
-
 Public Class UsuarioAD
 
     ' Objeto que permite conectarse a la BD Access
     Dim miConexion As New OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = Biblioteca.accdb")
 
     Public Sub New()
-        ' Como la clase no contiene atributos, únicamente métodos, esta se podría dejar tal cual
+
     End Sub
 
     Public Sub InsertarUsuario(ByVal pUsuario As UsuarioEN)
         Try
 
-            Dim SQL_INSERT_USUARIO As String = "INSERT INTO USUARIOS (Login, Clave, NombreCompleto, indAdministrador, indBibliotecario, IndActivo) VALUES (@Cedula, @Nombre, @FechaIngreso, @Horas, @PrecioHora, @IndActivo)"
+            Dim SQL_INSERT_USUARIO As String = "INSERT INTO USUARIOS (Login, Clave, NombreCompleto, indAdministrador, indBibliotecario, IndActivo) VALUES (@Login, @Clave, @NombreCompleto, @IndAdministrador, @IndBibliotecario, @IndActivo)"
             miConexion.Open()
 
             Dim cmdUsuario As New OleDbCommand(SQL_INSERT_USUARIO, miConexion)

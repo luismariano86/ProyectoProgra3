@@ -87,10 +87,10 @@
     <Compile Include="dsReportes.vb">
       <DependentUpon>dsReportes.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmLibro.Designer.vb">
-      <DependentUpon>frmLibro.vb</DependentUpon>
+    <Compile Include="frmAutores.Designer.vb">
+      <DependentUpon>frmAutores.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmLibro.vb">
+    <Compile Include="frmAutores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.vb">
@@ -141,8 +141,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmLibro.resx">
-      <DependentUpon>frmLibro.vb</DependentUpon>
+    <EmbeddedResource Include="frmAutores.resx">
+      <DependentUpon>frmAutores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>

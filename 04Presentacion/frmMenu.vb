@@ -72,4 +72,14 @@
             MessageBox.Show("Sigue en el Sistema")
         End If
     End Sub
+
+    Private Sub mnuAutores_Click(sender As Object, e As EventArgs) Handles mnuAutores.Click
+        Dim Pantalla As New frmAutores
+        Pantalla.Show()
+    End Sub
+
+    Private Sub tsbtnAutores_Click(sender As Object, e As EventArgs) Handles tsbtnAutores.Click
+        Dim Pantalla As New frmAutores
+        Pantalla.Show()
+    End Sub
 End Class
