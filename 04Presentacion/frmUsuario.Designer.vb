@@ -23,7 +23,7 @@ Partial Class frmUsuario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnBorrar = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnInsertar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -39,31 +39,33 @@ Partial Class frmUsuario
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtClave = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnLimpiarCampos = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnBorrar
         '
-        Me.btnBorrar.Location = New System.Drawing.Point(431, 276)
+        Me.btnBorrar.Location = New System.Drawing.Point(428, 251)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
         Me.btnBorrar.TabIndex = 27
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnModificar
         '
-        Me.Button1.Location = New System.Drawing.Point(305, 276)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 26
-        Me.Button1.Text = "Modificar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnModificar.Location = New System.Drawing.Point(313, 251)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.btnModificar.TabIndex = 26
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.UseVisualStyleBackColor = True
         '
         'btnBuscar
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(193, 277)
+        Me.btnBuscar.Location = New System.Drawing.Point(189, 251)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.btnBuscar.TabIndex = 25
@@ -72,7 +74,7 @@ Partial Class frmUsuario
         '
         'btnInsertar
         '
-        Me.btnInsertar.Location = New System.Drawing.Point(51, 277)
+        Me.btnInsertar.Location = New System.Drawing.Point(65, 251)
         Me.btnInsertar.Name = "btnInsertar"
         Me.btnInsertar.Size = New System.Drawing.Size(75, 23)
         Me.btnInsertar.TabIndex = 24
@@ -95,7 +97,7 @@ Partial Class frmUsuario
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(9)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(9)
-        Me.GroupBox1.Size = New System.Drawing.Size(522, 206)
+        Me.GroupBox1.Size = New System.Drawing.Size(504, 206)
         Me.GroupBox1.TabIndex = 23
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingreso de Datos"
@@ -104,7 +106,7 @@ Partial Class frmUsuario
         '
         Me.GroupBox2.Controls.Add(Me.rbtnBibliotecario)
         Me.GroupBox2.Controls.Add(Me.rbtnAdministrador)
-        Me.GroupBox2.Location = New System.Drawing.Point(173, 123)
+        Me.GroupBox2.Location = New System.Drawing.Point(154, 110)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(217, 66)
         Me.GroupBox2.TabIndex = 14
@@ -138,7 +140,7 @@ Partial Class frmUsuario
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(429, 123)
+        Me.Label6.Location = New System.Drawing.Point(402, 110)
         Me.Label6.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(67, 13)
@@ -148,7 +150,7 @@ Partial Class frmUsuario
         'rbtnNo
         '
         Me.rbtnNo.AutoSize = True
-        Me.rbtnNo.Location = New System.Drawing.Point(433, 172)
+        Me.rbtnNo.Location = New System.Drawing.Point(406, 159)
         Me.rbtnNo.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.rbtnNo.Name = "rbtnNo"
         Me.rbtnNo.Size = New System.Drawing.Size(39, 17)
@@ -160,7 +162,7 @@ Partial Class frmUsuario
         'rbtnSi
         '
         Me.rbtnSi.AutoSize = True
-        Me.rbtnSi.Location = New System.Drawing.Point(433, 147)
+        Me.rbtnSi.Location = New System.Drawing.Point(406, 134)
         Me.rbtnSi.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.rbtnSi.Name = "rbtnSi"
         Me.rbtnSi.Size = New System.Drawing.Size(34, 17)
@@ -210,6 +212,7 @@ Partial Class frmUsuario
         Me.txtClave.Location = New System.Drawing.Point(32, 135)
         Me.txtClave.Margin = New System.Windows.Forms.Padding(9)
         Me.txtClave.Name = "txtClave"
+        Me.txtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtClave.Size = New System.Drawing.Size(79, 20)
         Me.txtClave.TabIndex = 3
         '
@@ -223,18 +226,38 @@ Partial Class frmUsuario
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Clave"
         '
+        'btnLimpiarCampos
+        '
+        Me.btnLimpiarCampos.Location = New System.Drawing.Point(103, 303)
+        Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
+        Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
+        Me.btnLimpiarCampos.TabIndex = 28
+        Me.btnLimpiarCampos.Text = "Limpiar Campos"
+        Me.btnLimpiarCampos.UseVisualStyleBackColor = True
+        '
+        'btnSalir
+        '
+        Me.btnSalir.Location = New System.Drawing.Point(313, 303)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(113, 23)
+        Me.btnSalir.TabIndex = 29
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
+        '
         'frmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(645, 384)
+        Me.ClientSize = New System.Drawing.Size(570, 347)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.btnLimpiarCampos)
         Me.Controls.Add(Me.btnBorrar)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.btnInsertar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmUsuario"
-        Me.Text = "frmUsuario"
+        Me.Text = "Usuarios"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -244,7 +267,7 @@ Partial Class frmUsuario
     End Sub
 
     Friend WithEvents btnBorrar As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnModificar As Button
     Friend WithEvents btnBuscar As Button
     Friend WithEvents btnInsertar As Button
     Friend WithEvents GroupBox1 As GroupBox
@@ -260,4 +283,6 @@ Partial Class frmUsuario
     Friend WithEvents Label1 As Label
     Friend WithEvents txtClave As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents btnLimpiarCampos As Button
+    Friend WithEvents btnSalir As Button
 End Class

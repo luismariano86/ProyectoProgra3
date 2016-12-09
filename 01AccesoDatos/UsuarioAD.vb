@@ -21,7 +21,7 @@ Public Class UsuarioAD
 
             cmdUsuario.Parameters.Add("@Login", OleDbType.VarChar).Value = pUsuario.Login
             cmdUsuario.Parameters.Add("@Clave", OleDbType.VarChar).Value = pUsuario.Clave
-            cmdUsuario.Parameters.Add("@NombreCompleto", OleDbType.Date).Value = pUsuario.NombreCompleto
+            cmdUsuario.Parameters.Add("@NombreCompleto", OleDbType.VarChar).Value = pUsuario.NombreCompleto
             cmdUsuario.Parameters.Add("@indAdministrador", OleDbType.Integer).Value = pUsuario.IndAdministrador
             cmdUsuario.Parameters.Add("@indBibliotecario", OleDbType.Double).Value = pUsuario.IndBibliotecario
             cmdUsuario.Parameters.Add("@indActivo", OleDbType.Boolean).Value = pUsuario.IndActivo
@@ -40,13 +40,13 @@ Public Class UsuarioAD
 
     Public Sub ModificarUsuario(ByVal pUsuario As UsuarioEN)
         Try
-            Dim SQL_UPDATE_USUARIO As String = "UPDATE USUARIOS SET NombreCompleto=@NombreCompleto, ClaveAdministrador=@ClaveAdministrador, indBibliotecario=@indBibliotecario, indActivo=@indActivo WHERE Login=@Login"
+            Dim SQL_UPDATE_USUARIO As String = "UPDATE USUARIOS SET Clave=@Clave, NombreCompleto=@NombreCompleto, indAdministrador=@indAdministrador, indBibliotecario=@indBibliotecario, indActivo=@indActivo WHERE Login=@Login"
             miConexion.Open()
 
             Dim cmdUsuario As New OleDbCommand(SQL_UPDATE_USUARIO, miConexion)
 
             cmdUsuario.Parameters.Add("@Clave", OleDbType.VarChar).Value = pUsuario.Clave
-            cmdUsuario.Parameters.Add("@NombreCompleto", OleDbType.Date).Value = pUsuario.NombreCompleto
+            cmdUsuario.Parameters.Add("@NombreCompleto", OleDbType.VarChar).Value = pUsuario.NombreCompleto
             cmdUsuario.Parameters.Add("@indAdministrador", OleDbType.Integer).Value = pUsuario.IndAdministrador
             cmdUsuario.Parameters.Add("@indBibliotecario", OleDbType.Double).Value = pUsuario.IndBibliotecario
             cmdUsuario.Parameters.Add("@indActivo", OleDbType.Boolean).Value = pUsuario.IndActivo
@@ -67,7 +67,7 @@ Public Class UsuarioAD
 
     Public Sub BorrarUsuario(ByVal pUsuario As UsuarioEN)
         Try
-            Dim SQL_BORRAR_Usuario As String = "DELETE FROM Usuario WHERE Login=@Login"
+            Dim SQL_BORRAR_Usuario As String = "DELETE FROM USUARIOS WHERE Login=@Login"
             miConexion.Open()
 
             Dim cmdUsuario As New OleDbCommand(SQL_BORRAR_Usuario, miConexion)

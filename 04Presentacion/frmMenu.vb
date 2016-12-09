@@ -17,6 +17,8 @@
 
         If user.IndBibliotecario Then
             mnuPrestamosFechas.Enabled = False
+            mnuUsuarios.Enabled = False
+
         End If
 
     End Sub
@@ -58,5 +60,16 @@
     Private Sub tsbtnUsuarios_Click(sender As Object, e As EventArgs) Handles tsbtnUsuarios.Click
         Dim Pantalla As New frmUsuario
         Pantalla.Show()
+    End Sub
+
+    Private Sub mnuSalir_Click(sender As Object, e As EventArgs) Handles mnuSalir.Click
+        Dim intOption As Integer
+        intOption = MessageBox.Show("Desea Salir?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
+
+        If intOption = 6 Then
+            Application.Exit()
+        ElseIf intOption = 7 Then
+            MessageBox.Show("Sigue en el Sistema")
+        End If
     End Sub
 End Class

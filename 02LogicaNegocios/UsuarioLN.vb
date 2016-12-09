@@ -10,9 +10,9 @@ Public Class UsuarioLN
         Try
             If (pUsuario.Login.Trim().Length = 0) Then
                 Throw New Exception("El Login Es Obligatorio")
-            ElseIf pUsuario.Clave.Trim().Length < 9 Then
+            ElseIf (pUsuario.Clave.Trim().Length < 4) Then
                 Throw New Exception("La Clave tiene que ser Mayor a 4 y menor que 8 caracteres")
-            ElseIf pUsuario.Clave.Trim().Length > 4 Then
+            ElseIf (pUsuario.Clave.Trim().Length > 9) Then
                 Throw New Exception("La Clave tiene que ser Mayor a 4 y menor que 8 caracteres")
             ElseIf String.IsNullOrWhiteSpace(pUsuario.NombreCompleto) Then
                 Throw New Exception("Nombre es obligatorio")
@@ -34,20 +34,19 @@ Public Class UsuarioLN
         Try
             If (pUsuario.Login.Trim().Length = 0) Then
                 Throw New Exception("El Login Es Obligatorio")
-            ElseIf pUsuario.Clave.Trim().Length < 9 Then
+            ElseIf pUsuario.Clave.Trim().Length > 9 Then
                 Throw New Exception("La Clave tiene que ser Mayor a 4 y menor que 8 caracteres")
-            ElseIf pUsuario.Clave.Trim().Length > 4 Then
+            ElseIf pUsuario.Clave.Trim().Length < 4 Then
                 Throw New Exception("La Clave tiene que ser Mayor a 4 y menor que 8 caracteres")
             ElseIf String.IsNullOrWhiteSpace(pUsuario.NombreCompleto) Then
                 Throw New Exception("Nombre es obligatorio")
             End If
 
             Dim UsuAD As New UsuarioAD
-            If Not IsNothing(UsuAD.ObtenerUsuarioPorLogin(pUsuario.Login)) Then
-                Throw New Exception("YA EXISTE")
+            If IsNothing(UsuAD.ObtenerUsuarioPorLogin(pUsuario.Login)) Then
+                Throw New Exception("NO EXISTE")
             End If
-            UsuAD.InsertarUsuario(pUsuario)
-
+            UsuAD.ModificarUsuario(pUsuario)
 
 
         Catch ex As Exception
