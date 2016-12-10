@@ -82,4 +82,14 @@
         Dim Pantalla As New frmAutores
         Pantalla.Show()
     End Sub
+
+    Private Sub mnuCientes_Click(sender As Object, e As EventArgs) Handles mnuCientes.Click
+        Dim Pantalla As New frmClientes
+        Pantalla.Show()
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        Dim Pantalla As New frmClientes
+        Pantalla.Show()
+    End Sub
 End Class

@@ -42,6 +42,7 @@ Partial Class frmMenu
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.sslblFecha = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.tsbtnAutores = New System.Windows.Forms.ToolStripButton()
         Me.tsbtnLibros = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbtnDevolucion = New System.Windows.Forms.ToolStripButton()
@@ -50,7 +51,6 @@ Partial Class frmMenu
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.tsbtnUsuarios = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tsbtnAutores = New System.Windows.Forms.ToolStripButton()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -185,6 +185,15 @@ Partial Class frmMenu
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
         '
+        'tsbtnAutores
+        '
+        Me.tsbtnAutores.Image = CType(resources.GetObject("tsbtnAutores.Image"), System.Drawing.Image)
+        Me.tsbtnAutores.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbtnAutores.Name = "tsbtnAutores"
+        Me.tsbtnAutores.Size = New System.Drawing.Size(52, 35)
+        Me.tsbtnAutores.Text = "Autores"
+        Me.tsbtnAutores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
         'tsbtnLibros
         '
         Me.tsbtnLibros.Image = CType(resources.GetObject("tsbtnLibros.Image"), System.Drawing.Image)
@@ -244,15 +253,6 @@ Partial Class frmMenu
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
-        '
-        'tsbtnAutores
-        '
-        Me.tsbtnAutores.Image = CType(resources.GetObject("tsbtnAutores.Image"), System.Drawing.Image)
-        Me.tsbtnAutores.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tsbtnAutores.Name = "tsbtnAutores"
-        Me.tsbtnAutores.Size = New System.Drawing.Size(52, 35)
-        Me.tsbtnAutores.Text = "Autores"
-        Me.tsbtnAutores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'frmMenu
         '
