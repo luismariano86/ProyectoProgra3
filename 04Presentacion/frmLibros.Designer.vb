@@ -29,6 +29,12 @@ Partial Class frmLibros
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnInsertar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cboAutor = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cboPais = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.txtISBN = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.dtpFecPublicacion = New System.Windows.Forms.DateTimePicker()
@@ -39,12 +45,6 @@ Partial Class frmLibros
         Me.txtEditorial = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.cboPais = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtDescripcion = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.cboAutor = New System.Windows.Forms.ComboBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,7 +53,7 @@ Partial Class frmLibros
         Me.btnSalir.Location = New System.Drawing.Point(281, 426)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(113, 23)
-        Me.btnSalir.TabIndex = 12
+        Me.btnSalir.TabIndex = 5
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
@@ -62,7 +62,7 @@ Partial Class frmLibros
         Me.btnLimpiarCampos.Location = New System.Drawing.Point(71, 426)
         Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
         Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
-        Me.btnLimpiarCampos.TabIndex = 11
+        Me.btnLimpiarCampos.TabIndex = 4
         Me.btnLimpiarCampos.Text = "Limpiar Campos"
         Me.btnLimpiarCampos.UseVisualStyleBackColor = True
         '
@@ -71,7 +71,7 @@ Partial Class frmLibros
         Me.btnBorrar.Location = New System.Drawing.Point(396, 374)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBorrar.TabIndex = 10
+        Me.btnBorrar.TabIndex = 3
         Me.btnBorrar.Text = "Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = True
         '
@@ -80,7 +80,7 @@ Partial Class frmLibros
         Me.btnModificar.Location = New System.Drawing.Point(281, 374)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(75, 23)
-        Me.btnModificar.TabIndex = 9
+        Me.btnModificar.TabIndex = 2
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
@@ -89,7 +89,7 @@ Partial Class frmLibros
         Me.btnBuscar.Location = New System.Drawing.Point(157, 374)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscar.TabIndex = 8
+        Me.btnBuscar.TabIndex = 1
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
@@ -98,7 +98,7 @@ Partial Class frmLibros
         Me.btnInsertar.Location = New System.Drawing.Point(33, 374)
         Me.btnInsertar.Name = "btnInsertar"
         Me.btnInsertar.Size = New System.Drawing.Size(75, 23)
-        Me.btnInsertar.TabIndex = 7
+        Me.btnInsertar.TabIndex = 0
         Me.btnInsertar.Text = "Insertar"
         Me.btnInsertar.UseVisualStyleBackColor = True
         '
@@ -125,9 +125,63 @@ Partial Class frmLibros
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(9)
         Me.GroupBox1.Size = New System.Drawing.Size(465, 333)
-        Me.GroupBox1.TabIndex = 13
+        Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingreso de Datos"
+        '
+        'cboAutor
+        '
+        Me.cboAutor.FormattingEnabled = True
+        Me.cboAutor.Location = New System.Drawing.Point(24, 293)
+        Me.cboAutor.Name = "cboAutor"
+        Me.cboAutor.Size = New System.Drawing.Size(121, 21)
+        Me.cboAutor.TabIndex = 7
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(21, 274)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(68, 13)
+        Me.Label8.TabIndex = 15
+        Me.Label8.Text = "Codigo Autor"
+        '
+        'txtDescripcion
+        '
+        Me.txtDescripcion.Location = New System.Drawing.Point(24, 238)
+        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(9)
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(275, 20)
+        Me.txtDescripcion.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(21, 216)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(63, 13)
+        Me.Label3.TabIndex = 14
+        Me.Label3.Text = "Descripción"
+        '
+        'cboPais
+        '
+        Me.cboPais.FormattingEnabled = True
+        Me.cboPais.Location = New System.Drawing.Point(175, 176)
+        Me.cboPais.Name = "cboPais"
+        Me.cboPais.Size = New System.Drawing.Size(121, 21)
+        Me.cboPais.TabIndex = 5
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(172, 157)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(29, 13)
+        Me.Label7.TabIndex = 13
+        Me.Label7.Text = "País"
         '
         'txtISBN
         '
@@ -144,7 +198,7 @@ Partial Class frmLibros
         Me.Label6.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(32, 13)
-        Me.Label6.TabIndex = 6
+        Me.Label6.TabIndex = 10
         Me.Label6.Text = "ISBN"
         '
         'dtpFecPublicacion
@@ -154,7 +208,7 @@ Partial Class frmLibros
         Me.dtpFecPublicacion.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.dtpFecPublicacion.Name = "dtpFecPublicacion"
         Me.dtpFecPublicacion.Size = New System.Drawing.Size(116, 20)
-        Me.dtpFecPublicacion.TabIndex = 2
+        Me.dtpFecPublicacion.TabIndex = 4
         '
         'txtCategoria
         '
@@ -162,7 +216,7 @@ Partial Class frmLibros
         Me.txtCategoria.Margin = New System.Windows.Forms.Padding(9)
         Me.txtCategoria.Name = "txtCategoria"
         Me.txtCategoria.Size = New System.Drawing.Size(132, 20)
-        Me.txtCategoria.TabIndex = 4
+        Me.txtCategoria.TabIndex = 3
         '
         'Label5
         '
@@ -171,7 +225,7 @@ Partial Class frmLibros
         Me.Label5.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(52, 13)
-        Me.Label5.TabIndex = 10
+        Me.Label5.TabIndex = 11
         Me.Label5.Text = "Categoria"
         '
         'txtNombre
@@ -189,7 +243,7 @@ Partial Class frmLibros
         Me.Label4.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(80, 13)
-        Me.Label4.TabIndex = 7
+        Me.Label4.TabIndex = 8
         Me.Label4.Text = "Titulo Completo"
         '
         'txtEditorial
@@ -198,7 +252,7 @@ Partial Class frmLibros
         Me.txtEditorial.Margin = New System.Windows.Forms.Padding(9)
         Me.txtEditorial.Name = "txtEditorial"
         Me.txtEditorial.Size = New System.Drawing.Size(103, 20)
-        Me.txtEditorial.TabIndex = 3
+        Me.txtEditorial.TabIndex = 2
         '
         'Label1
         '
@@ -217,62 +271,8 @@ Partial Class frmLibros
         Me.Label2.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(110, 13)
-        Me.Label2.TabIndex = 8
+        Me.Label2.TabIndex = 12
         Me.Label2.Text = "Fecha de Publicación"
-        '
-        'cboPais
-        '
-        Me.cboPais.FormattingEnabled = True
-        Me.cboPais.Location = New System.Drawing.Point(175, 176)
-        Me.cboPais.Name = "cboPais"
-        Me.cboPais.Size = New System.Drawing.Size(121, 21)
-        Me.cboPais.TabIndex = 13
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(172, 157)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(29, 13)
-        Me.Label7.TabIndex = 12
-        Me.Label7.Text = "País"
-        '
-        'txtDescripcion
-        '
-        Me.txtDescripcion.Location = New System.Drawing.Point(24, 238)
-        Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(9)
-        Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(275, 20)
-        Me.txtDescripcion.TabIndex = 14
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(21, 216)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 13)
-        Me.Label3.TabIndex = 15
-        Me.Label3.Text = "Descripción"
-        '
-        'cboAutor
-        '
-        Me.cboAutor.FormattingEnabled = True
-        Me.cboAutor.Location = New System.Drawing.Point(24, 293)
-        Me.cboAutor.Name = "cboAutor"
-        Me.cboAutor.Size = New System.Drawing.Size(121, 21)
-        Me.cboAutor.TabIndex = 17
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(21, 274)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(68, 13)
-        Me.Label8.TabIndex = 16
-        Me.Label8.Text = "Codigo Autor"
         '
         'frmLibros
         '
