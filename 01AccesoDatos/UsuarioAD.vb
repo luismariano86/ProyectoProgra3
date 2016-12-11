@@ -5,10 +5,6 @@ Public Class UsuarioAD
     ' Objeto que permite conectarse a la BD Access
     Dim miConexion As New OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = Biblioteca.accdb")
 
-    Public Sub New()
-
-    End Sub
-
     Public Sub InsertarUsuario(ByVal pUsuario As UsuarioEN)
         Try
 

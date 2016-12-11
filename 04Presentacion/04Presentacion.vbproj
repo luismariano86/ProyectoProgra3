@@ -99,6 +99,12 @@
     <Compile Include="frmClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmLibros.Designer.vb">
+      <DependentUpon>frmLibros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLibros.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLibros.resx">
+      <DependentUpon>frmLibros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>

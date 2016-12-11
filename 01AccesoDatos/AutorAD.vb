@@ -5,10 +5,6 @@ Public Class AutorAD
     ' Objeto que permite conectarse a la BD Access
     Dim miConexion As New OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = Biblioteca.accdb")
 
-    Public Sub New()
-
-    End Sub
-
     Public Sub InsertarAutor(ByVal pAutor As AutorEN)
         Try
 
@@ -87,17 +83,17 @@ Public Class AutorAD
             cmdAutor.Parameters.Add("@CodAutor", OleDbType.VarChar).Value = pCodAutor
             Dim drAutor As OleDbDataReader
             drAutor = cmdAutor.ExecuteReader()
-            Dim miUser As AutorEN = Nothing
+            Dim miAut As AutorEN = Nothing
             While drAutor.Read
-                miUser = New AutorEN
-                miUser.CodAutor = drAutor("CodAutor")
-                miUser.NombreAutor = drAutor("NombreAutor")
-                miUser.Nacionalidad = drAutor("Nacionalidad")
+                miAut = New AutorEN
+                miAut.CodAutor = drAutor("CodAutor")
+                miAut.NombreAutor = drAutor("NombreAutor")
+                miAut.Nacionalidad = drAutor("Nacionalidad")
 
             End While
             drAutor.Close()
             miConexion.Close()
-            Return miUser
+            Return miAut
         Catch ex As Exception
             If (miConexion.State = ConnectionState.Open) Then
                 miConexion.Close()
@@ -107,9 +103,9 @@ Public Class AutorAD
         End Try
     End Function
 
-    Public Function obtenerTodosAUTORES() As List(Of AutorEN)
+    Public Function obtenerTodosAutores() As List(Of AutorEN)
         Try
-            Dim SQL_OBTENER_AUTORES As String = "SELECT CodAutor, NombreAutor, Nacionalidad, indAdministrador, indBibliotecario, indActivo FROM AUTORES"
+            Dim SQL_OBTENER_AUTORES As String = "SELECT CodAutor, NombreAutor, Nacionalidad FROM AUTORES"
             miConexion.Open()
 
             Dim cmdAutor As New OleDbCommand(SQL_OBTENER_AUTORES, miConexion)
@@ -120,11 +116,11 @@ Public Class AutorAD
             Dim lstAUTORES As New List(Of AutorEN)
 
             While drAutor.Read
-                Dim miUser As New AutorEN
-                miUser.CodAutor = drAutor("CodAutor")
-                miUser.NombreAutor = drAutor("NombreAutor")
-                miUser.Nacionalidad = drAutor("Nombre_Completo")
-                lstAUTORES.Add(miUser)
+                Dim miAut As New AutorEN
+                miAut.CodAutor = drAutor("CodAutor")
+                miAut.NombreAutor = drAutor("NombreAutor")
+                miAut.Nacionalidad = drAutor("Nacionalidad")
+                lstAUTORES.Add(miAut)
             End While
             drAutor.Close()
             miConexion.Close()

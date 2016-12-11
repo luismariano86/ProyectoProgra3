@@ -92,4 +92,14 @@
         Dim Pantalla As New frmClientes
         Pantalla.Show()
     End Sub
+
+    Private Sub tsbtnLibros_Click(sender As Object, e As EventArgs) Handles tsbtnLibros.Click
+        Dim Pantalla As New frmLibros
+        Pantalla.Show()
+    End Sub
+
+    Private Sub mnuLibros_Click(sender As Object, e As EventArgs) Handles mnuLibros.Click
+        Dim Pantalla As New frmLibros
+        Pantalla.Show()
+    End Sub
 End Class

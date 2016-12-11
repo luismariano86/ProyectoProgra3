@@ -114,10 +114,10 @@
         strDatos =
             "Cedula: " & _Cedula & vbCrLf &
             "Telefono: " & _Telefono & vbCrLf &
-            "DireccionExacta: " & _DireccionExacta & vbCrLf &
+            "Direccion Exacta: " & _DireccionExacta & vbCrLf &
             "Nombre completo: " & _NombreCompleto & vbCrLf &
-            "Administrador del Sistema: " & IIf(_FecNacimiento.ToShortDateString, "Es Administrador", "No es Administrador") &
-            "Nivel Bibliotecario: " & IIf(_FecRegistro.ToShortDateString, "Activo", "Renuncio")
+            "Fecha de Nacimiento: " & _FecNacimiento.ToShortDateString &
+            "Fecha de Registro: " & FecRegistro.ToShortDateString
 
         Return strDatos
 

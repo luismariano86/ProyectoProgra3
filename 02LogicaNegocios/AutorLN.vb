@@ -81,10 +81,10 @@ Public Class AutorLN
         End Try
     End Function
 
-    Public Function obtenerTodosAutors() As List(Of AutorEN)
+    Public Function obtenerTodosAutores() As List(Of AutorEN)
         Try
             Dim AutAD As New AutorAD
-            Return AutAD.obtenerTodosAUTORES()
+            Return AutAD.obtenerTodosAutores()
 
         Catch ex As Exception
             Throw New Exception(ex.Message)

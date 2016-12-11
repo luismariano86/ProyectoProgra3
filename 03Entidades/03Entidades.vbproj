@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutorEN.vb" />
+    <Compile Include="LibroEN.vb" />
     <Compile Include="ClienteEN.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
