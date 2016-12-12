@@ -1,23 +1,27 @@
 ﻿Imports _03Entidades
 Imports _02LogicaNegocios
 Public Class frmPrestamos
+
+    Dim lstClientes As New List(Of ClienteEN)
+    Dim lstLibros As New List(Of LibroEN)
     Private Sub frmPrestamos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         lblUsuActivo.Text = "pedro"
 
-        Dim lstClientes As New List(Of ClienteEN)
         Dim validaClientes As New ClienteLN
         lstClientes = validaClientes.obtenerTodosClientes
         cboClientes.DataSource = lstClientes
         cboClientes.DisplayMember = "NombreCompleto" 'Propiedad EN (Visualiza)
         cboClientes.ValueMember = "Cedula" 'Propiedad EN (Valor Interno)
+        cboClientes.Text = ""
 
-        Dim lstLibros As New List(Of LibroEN)
         Dim validaLibros As New LibroLN
         lstLibros = validaLibros.obtenerTodosLibros
         cboLibros.DataSource = lstLibros
         cboLibros.DisplayMember = "TituloCompleto" 'Propiedad EN (Visualiza)
         cboLibros.ValueMember = "ISBN" 'Propiedad EN (Valor Interno)
+        cboLibros.Text = ""
+
     End Sub
     Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
 
@@ -44,12 +48,15 @@ Public Class frmPrestamos
 
 
             txtCodPrestamo.Clear()
-            cboClientes.ResetText()
-            cboClientes.ResetText()
             rbtnSi.Checked = False
             rbtnNo.Checked = False
             txtObservacion.Clear()
             txtMonto.Clear()
+            cboClientes.Text = ""
+            cboLibros.Text = ""
+            dtpFecDevolucion.Value = Today
+            dtpFecPrestamo.Value = Today
+
 
 
         Catch ex As Exception
@@ -59,12 +66,14 @@ Public Class frmPrestamos
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         txtCodPrestamo.Clear()
-        cboClientes.ResetText()
-        cboClientes.ResetText()
         rbtnSi.Checked = False
         rbtnNo.Checked = False
         txtObservacion.Clear()
         txtMonto.Clear()
+        cboClientes.Text = ""
+        cboLibros.Text = ""
+        dtpFecDevolucion.Value = Today
+        dtpFecPrestamo.Value = Today
         btnInsertar.Enabled = False
 
         Try
@@ -78,8 +87,18 @@ Public Class frmPrestamos
 
             If Not IsNothing(miPrest) Then
                 txtCodPrestamo.Text = miPrest.CodPrestamo
-                cboClientes.Text = miPrest.Cedula
-                cboLibros.Text = miPrest.ISBN
+                For Each item As ClienteEN In lstClientes
+                    If (miPrest.Cedula = item.Cedula) Then
+                        cboClientes.Text = item.NombreCompleto
+                        Exit For
+                    End If
+                Next
+                For Each item As LibroEN In lstLibros
+                    If (miPrest.ISBN = item.ISBN) Then
+                        cboLibros.Text = item.TituloCompleto
+                        Exit For
+                    End If
+                Next
                 txtMonto.Text = miPrest.Monto
                 dtpFecPrestamo.Text = miPrest.FecPrestamo
                 dtpFecDevolucion.Text = miPrest.FecDevolucion
@@ -129,12 +148,14 @@ Public Class frmPrestamos
             MessageBox.Show("El Prestamo ha sido Modificado con Exito!")
 
             txtCodPrestamo.Clear()
-            cboClientes.ResetText()
-            cboClientes.ResetText()
             rbtnSi.Checked = False
             rbtnNo.Checked = False
             txtObservacion.Clear()
             txtMonto.Clear()
+            cboClientes.Text = ""
+            cboLibros.Text = ""
+            dtpFecDevolucion.Value = Today
+            dtpFecPrestamo.Value = Today
 
 
         Catch ex As Exception
@@ -191,13 +212,14 @@ Public Class frmPrestamos
 
     Private Sub btnLimpiarCampos_Click(sender As Object, e As EventArgs) Handles btnLimpiarCampos.Click
         txtCodPrestamo.Clear()
-        cboClientes.ResetText()
-        cboClientes.ResetText()
         rbtnSi.Checked = False
         rbtnNo.Checked = False
         txtObservacion.Clear()
         txtMonto.Clear()
-        btnInsertar.Enabled = True
+        cboClientes.Text = ""
+        cboLibros.Text = ""
+        dtpFecDevolucion.Value = Today
+        dtpFecPrestamo.Value = Today
 
     End Sub
 

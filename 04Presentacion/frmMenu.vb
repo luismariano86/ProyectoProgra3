@@ -14,6 +14,8 @@
 
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         sslblFecha.Text = Date.Today.ToLongDateString
+        sslblTipoUsuario.Text = "Nivel de Usuario: "
+        sslblUsuario.Text = "Usuario: "
 
         If user.IndBibliotecario Then
             mnuPrestamosFechas.Enabled = False
@@ -110,6 +112,11 @@
 
     Private Sub tsbtnPrestamo_Click(sender As Object, e As EventArgs) Handles tsbtnPrestamo.Click
         Dim Pantalla As New frmPrestamos
+        Pantalla.Show()
+    End Sub
+
+    Private Sub mnuAcercaDe_Click(sender As Object, e As EventArgs) Handles mnuAcercaDe.Click
+        Dim Pantalla As New frmAcercaDe
         Pantalla.Show()
     End Sub
 End Class

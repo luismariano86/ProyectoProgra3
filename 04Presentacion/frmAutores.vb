@@ -27,7 +27,7 @@ Public Class frmAutores
             MessageBox.Show("El Autor ha sido Creado con Exito!")
 
             txtCodAutor.Clear()
-            cbxNacionalidad.SelectedItem = -1
+            cbxNacionalidad.Text = ""
             txtNombre.Clear()
 
         Catch ex As Exception
@@ -37,7 +37,7 @@ Public Class frmAutores
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         txtCodAutor.Clear()
-        cbxNacionalidad.SelectedItem = -1
+        cbxNacionalidad.Text = ""
         txtNombre.Clear()
         btnInsertar.Enabled = False
 
@@ -78,7 +78,7 @@ Public Class frmAutores
             MessageBox.Show("El Autor ha sido Modificado con Exito!")
 
             txtCodAutor.Clear()
-            cbxNacionalidad.SelectedItem = -1
+            cbxNacionalidad.Text = ""
             txtNombre.Clear()
 
 
@@ -105,7 +105,7 @@ Public Class frmAutores
             If intOption = 6 Then
                 valida.BorrarAutor(miAut)
                 txtCodAutor.Clear()
-                cbxNacionalidad.SelectedItem = -1
+                cbxNacionalidad.Text = ""
                 txtNombre.Clear()
                 MessageBox.Show("El Autor ha sido Eliminado con Exito!")
                 btnInsertar.Enabled = True
@@ -119,7 +119,7 @@ Public Class frmAutores
 
     Private Sub btnLimpiarCampos_Click(sender As Object, e As EventArgs) Handles btnLimpiarCampos.Click
         txtCodAutor.Clear()
-        cbxNacionalidad.SelectedItem = -1
+        cbxNacionalidad.Text = ""
         txtNombre.Clear()
         btnInsertar.Enabled = True
 

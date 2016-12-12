@@ -38,19 +38,19 @@ Partial Class frmMenu
         Me.mnuAcercaDe = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuSalir = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.sslblUsuario = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.sslblTipoUsuario = New System.Windows.Forms.ToolStripStatusLabel()
         Me.sslblFecha = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbtnAutores = New System.Windows.Forms.ToolStripButton()
         Me.tsbtnLibros = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbtnDevolucion = New System.Windows.Forms.ToolStripButton()
         Me.tsbtnPrestamo = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.tsbtnUsuarios = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -75,25 +75,25 @@ Partial Class frmMenu
         'mnuAutores
         '
         Me.mnuAutores.Name = "mnuAutores"
-        Me.mnuAutores.Size = New System.Drawing.Size(152, 22)
+        Me.mnuAutores.Size = New System.Drawing.Size(119, 22)
         Me.mnuAutores.Text = "Autores"
         '
         'mnuCientes
         '
         Me.mnuCientes.Name = "mnuCientes"
-        Me.mnuCientes.Size = New System.Drawing.Size(152, 22)
+        Me.mnuCientes.Size = New System.Drawing.Size(119, 22)
         Me.mnuCientes.Text = "Clientes"
         '
         'mnuLibros
         '
         Me.mnuLibros.Name = "mnuLibros"
-        Me.mnuLibros.Size = New System.Drawing.Size(152, 22)
+        Me.mnuLibros.Size = New System.Drawing.Size(119, 22)
         Me.mnuLibros.Text = "Libros"
         '
         'mnuUsuarios
         '
         Me.mnuUsuarios.Name = "mnuUsuarios"
-        Me.mnuUsuarios.Size = New System.Drawing.Size(152, 22)
+        Me.mnuUsuarios.Size = New System.Drawing.Size(119, 22)
         Me.mnuUsuarios.Text = "Usuarios"
         '
         'mnuProcesos
@@ -106,13 +106,13 @@ Partial Class frmMenu
         'mnuPréstamo
         '
         Me.mnuPréstamo.Name = "mnuPréstamo"
-        Me.mnuPréstamo.Size = New System.Drawing.Size(152, 22)
+        Me.mnuPréstamo.Size = New System.Drawing.Size(134, 22)
         Me.mnuPréstamo.Text = "Préstamos"
         '
         'mnuDevolucion
         '
         Me.mnuDevolucion.Name = "mnuDevolucion"
-        Me.mnuDevolucion.Size = New System.Drawing.Size(152, 22)
+        Me.mnuDevolucion.Size = New System.Drawing.Size(134, 22)
         Me.mnuDevolucion.Text = "Devolución"
         '
         'mnuReportes
@@ -148,26 +148,26 @@ Partial Class frmMenu
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripStatusLabel2, Me.sslblFecha})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.sslblUsuario, Me.sslblTipoUsuario, Me.sslblFecha})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 391)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(534, 22)
         Me.StatusStrip1.TabIndex = 1
         Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'ToolStripStatusLabel1
+        'sslblUsuario
         '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(173, 17)
-        Me.ToolStripStatusLabel1.Spring = True
-        Me.ToolStripStatusLabel1.Text = "ToolStripStatusLabel1"
+        Me.sslblUsuario.Name = "sslblUsuario"
+        Me.sslblUsuario.Size = New System.Drawing.Size(173, 17)
+        Me.sslblUsuario.Spring = True
+        Me.sslblUsuario.Text = "ToolStripStatusLabel1"
         '
-        'ToolStripStatusLabel2
+        'sslblTipoUsuario
         '
-        Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(173, 17)
-        Me.ToolStripStatusLabel2.Spring = True
-        Me.ToolStripStatusLabel2.Text = "ToolStripStatusLabel2"
+        Me.sslblTipoUsuario.Name = "sslblTipoUsuario"
+        Me.sslblTipoUsuario.Size = New System.Drawing.Size(173, 17)
+        Me.sslblTipoUsuario.Spring = True
+        Me.sslblTipoUsuario.Text = "ToolStripStatusLabel2"
         '
         'sslblFecha
         '
@@ -184,6 +184,21 @@ Partial Class frmMenu
         Me.ToolStrip1.Size = New System.Drawing.Size(534, 38)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 38)
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 38)
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
         '
         'tsbtnAutores
         '
@@ -203,11 +218,6 @@ Partial Class frmMenu
         Me.tsbtnLibros.Text = "Libros"
         Me.tsbtnLibros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 38)
-        '
         'tsbtnDevolucion
         '
         Me.tsbtnDevolucion.Image = CType(resources.GetObject("tsbtnDevolucion.Image"), System.Drawing.Image)
@@ -226,11 +236,6 @@ Partial Class frmMenu
         Me.tsbtnPrestamo.Text = "Préstamos"
         Me.tsbtnPrestamo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 38)
-        '
         'ToolStripButton1
         '
         Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
@@ -248,11 +253,6 @@ Partial Class frmMenu
         Me.tsbtnUsuarios.Size = New System.Drawing.Size(56, 35)
         Me.tsbtnUsuarios.Text = "Usuarios"
         Me.tsbtnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
         '
         'frmMenu
         '
@@ -296,8 +296,8 @@ Partial Class frmMenu
     Friend WithEvents mnuReportes As ToolStripMenuItem
     Friend WithEvents mnuPrestamosFechas As ToolStripMenuItem
     Friend WithEvents mnuLibrosXAutor As ToolStripMenuItem
-    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
-    Friend WithEvents ToolStripStatusLabel2 As ToolStripStatusLabel
+    Friend WithEvents sslblUsuario As ToolStripStatusLabel
+    Friend WithEvents sslblTipoUsuario As ToolStripStatusLabel
     Friend WithEvents sslblFecha As ToolStripStatusLabel
     Friend WithEvents mnuUsuarios As ToolStripMenuItem
     Friend WithEvents mnuAcercaDe As ToolStripMenuItem

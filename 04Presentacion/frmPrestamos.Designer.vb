@@ -24,7 +24,6 @@ Partial Class frmPrestamos
     Private Sub InitializeComponent()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnLimpiarCampos = New System.Windows.Forms.Button()
-        Me.btnBorrar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnInsertar = New System.Windows.Forms.Button()
@@ -48,6 +47,7 @@ Partial Class frmPrestamos
         Me.txtCodPrestamo = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnBorrar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -70,15 +70,6 @@ Partial Class frmPrestamos
         Me.btnLimpiarCampos.TabIndex = 11
         Me.btnLimpiarCampos.Text = "Limpiar Campos"
         Me.btnLimpiarCampos.UseVisualStyleBackColor = True
-        '
-        'btnBorrar
-        '
-        Me.btnBorrar.Location = New System.Drawing.Point(396, 374)
-        Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBorrar.TabIndex = 10
-        Me.btnBorrar.Text = "Borrar"
-        Me.btnBorrar.UseVisualStyleBackColor = True
         '
         'btnModificar
         '
@@ -317,6 +308,15 @@ Partial Class frmPrestamos
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Fecha de Prestamo"
         '
+        'btnBorrar
+        '
+        Me.btnBorrar.Location = New System.Drawing.Point(396, 374)
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBorrar.TabIndex = 10
+        Me.btnBorrar.Text = "Borrar"
+        Me.btnBorrar.UseVisualStyleBackColor = True
+        '
         'frmPrestamos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -343,7 +343,6 @@ Partial Class frmPrestamos
 
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnLimpiarCampos As Button
-    Friend WithEvents btnBorrar As Button
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnBuscar As Button
     Friend WithEvents btnInsertar As Button
@@ -367,4 +366,5 @@ Partial Class frmPrestamos
     Friend WithEvents cboLibros As ComboBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents lblUsuActivo As Label
+    Friend WithEvents btnBorrar As Button
 End Class

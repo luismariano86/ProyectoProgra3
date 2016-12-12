@@ -2,6 +2,8 @@
 Imports _02LogicaNegocios
 Imports System.Globalization
 Public Class frmLibros
+
+    Dim lstAutores As New List(Of AutorEN)
     Private Sub frmLibros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         For Each objCultureInfo As CultureInfo In CultureInfo.GetCultures(System.Globalization.CultureTypes.SpecificCultures)
             Dim objRegionInfo As New RegionInfo(objCultureInfo.Name)
@@ -11,13 +13,14 @@ Public Class frmLibros
         Next
         cboPais.Sorted = True
 
-        Dim lstAutores As New List(Of AutorEN)
+
         Dim valida As New AutorLN
         lstAutores = valida.obtenerTodosAutores
 
         cboAutor.DataSource = lstAutores
         cboAutor.DisplayMember = "NombreAutor" 'Propiedad EN (Visualiza)
         cboAutor.ValueMember = "CodAutor" 'Propiedad EN (Valor Interno)
+        cboAutor.Text = ""
 
 
 
@@ -44,10 +47,10 @@ Public Class frmLibros
             txtEditorial.Clear()
             txtNombre.Clear()
             txtCategoria.Clear()
-            dtpFecPublicacion.ResetText()
+            dtpFecPublicacion.Value = Today
             txtDescripcion.Clear()
-            cboPais.ResetText()
-            cboPais.ResetText()
+            cboPais.Text = ""
+            cboAutor.Text = ""
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -58,6 +61,11 @@ Public Class frmLibros
         txtISBN.Clear()
         txtEditorial.Clear()
         txtNombre.Clear()
+        txtCategoria.Clear()
+        dtpFecPublicacion.Value = Today
+        txtDescripcion.Clear()
+        cboPais.Text = ""
+        cboAutor.Text = ""
         btnInsertar.Enabled = False
 
         Try
@@ -78,7 +86,12 @@ Public Class frmLibros
                 cboPais.Text = miLib.Pais
                 txtCategoria.Text = miLib.Categoria
                 txtDescripcion.Text = miLib.Descripcion
-                miLib.CodAutor = cboAutor.SelectedValue
+                For Each item As AutorEN In lstAutores
+                    If (miLib.CodAutor = item.CodAutor) Then
+                        cboAutor.Text = item.NombreAutor
+                        Exit For
+                    End If
+                Next
 
                 btnModificar.Enabled = True
                 btnBorrar.Enabled = True
@@ -112,10 +125,10 @@ Public Class frmLibros
             txtEditorial.Clear()
             txtNombre.Clear()
             txtCategoria.Clear()
-            dtpFecPublicacion.ResetText()
+            dtpFecPublicacion.Value = Today
             txtDescripcion.Clear()
-            cboPais.ResetText()
-            cboPais.ResetText()
+            cboPais.Text = ""
+            cboAutor.Text = ""
 
 
         Catch ex As Exception
@@ -149,10 +162,10 @@ Public Class frmLibros
                 txtEditorial.Clear()
                 txtNombre.Clear()
                 txtCategoria.Clear()
-                dtpFecPublicacion.ResetText()
+                dtpFecPublicacion.Value = Today
                 txtDescripcion.Clear()
-                cboPais.ResetText()
-                cboPais.ResetText()
+                cboPais.Text = ""
+                cboAutor.Text = ""
 
                 MessageBox.Show("El Libro ha sido Eliminado con Exito!")
                 btnInsertar.Enabled = True
@@ -169,11 +182,10 @@ Public Class frmLibros
         txtEditorial.Clear()
         txtNombre.Clear()
         txtCategoria.Clear()
-        btnInsertar.Enabled = True
-        dtpFecPublicacion.ResetText()
+        dtpFecPublicacion.Value = Today
         txtDescripcion.Clear()
-        cboPais.ResetText()
-        cboPais.ResetText()
+        cboPais.Text = ""
+        cboAutor.Text = ""
 
 
     End Sub
