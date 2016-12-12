@@ -20,7 +20,6 @@
         _IndAdministrador = False
         _IndBibliotecario = False
         _IndActivo = False
-        _IndActivo = False
 
     End Sub
 

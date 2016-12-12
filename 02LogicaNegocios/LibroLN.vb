@@ -5,12 +5,12 @@ Public Class LibroLN
         Try
             If (pLibro.ISBN.Trim().Length = 0) Then
                 Throw New Exception("El ISBN Es Obligatorio")
-            ElseIf (pLibro.ISBN.Trim().Length > 10) Then
-                Throw New Exception("El ISBN no puede ser mayor a 10 digitos")
+            ElseIf (pLibro.ISBN.Trim().Length > 20) Then
+                Throw New Exception("El ISBN no puede ser mayor a 20 caracteres")
             ElseIf (pLibro.TituloCompleto.Trim().Length = 0) Then
                 Throw New Exception("El TituloCompleto Es Obligatorio")
-            ElseIf (pLibro.TituloCompleto.Trim().Length < 8) Then
-                Throw New Exception("El TituloCompleto tiene tener minimo 8 digitos")
+            ElseIf (pLibro.TituloCompleto.Trim().Length < 6) Then
+                Throw New Exception("El TituloCompleto tiene tener minimo 6 digitos")
             End If
 
             Dim LibAD As New LibroAD

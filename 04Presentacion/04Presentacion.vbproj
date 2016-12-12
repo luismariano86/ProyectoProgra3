@@ -117,6 +117,12 @@
     <Compile Include="frmMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmPrestamos.Designer.vb">
+      <DependentUpon>frmPrestamos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrestamos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReportes.Designer.vb">
       <DependentUpon>frmReportes.vb</DependentUpon>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrestamos.resx">
+      <DependentUpon>frmPrestamos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportes.resx">
       <DependentUpon>frmReportes.vb</DependentUpon>

@@ -106,13 +106,13 @@ Partial Class frmMenu
         'mnuPréstamo
         '
         Me.mnuPréstamo.Name = "mnuPréstamo"
-        Me.mnuPréstamo.Size = New System.Drawing.Size(134, 22)
-        Me.mnuPréstamo.Text = "Préstamo"
+        Me.mnuPréstamo.Size = New System.Drawing.Size(152, 22)
+        Me.mnuPréstamo.Text = "Préstamos"
         '
         'mnuDevolucion
         '
         Me.mnuDevolucion.Name = "mnuDevolucion"
-        Me.mnuDevolucion.Size = New System.Drawing.Size(134, 22)
+        Me.mnuDevolucion.Size = New System.Drawing.Size(152, 22)
         Me.mnuDevolucion.Text = "Devolución"
         '
         'mnuReportes
@@ -222,8 +222,8 @@ Partial Class frmMenu
         Me.tsbtnPrestamo.Image = CType(resources.GetObject("tsbtnPrestamo.Image"), System.Drawing.Image)
         Me.tsbtnPrestamo.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbtnPrestamo.Name = "tsbtnPrestamo"
-        Me.tsbtnPrestamo.Size = New System.Drawing.Size(61, 35)
-        Me.tsbtnPrestamo.Text = "Préstamo"
+        Me.tsbtnPrestamo.Size = New System.Drawing.Size(66, 35)
+        Me.tsbtnPrestamo.Text = "Préstamos"
         Me.tsbtnPrestamo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripSeparator1

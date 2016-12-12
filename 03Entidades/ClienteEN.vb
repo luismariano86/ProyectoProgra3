@@ -84,7 +84,7 @@
             Return _NombreCompleto
         End Get
     End Property
-    Public Property FecRegistro As Date
+    Public Property FecNacimiento As Date
         Set(value As Date)
             _FecNacimiento = value
         End Set
@@ -92,7 +92,7 @@
             Return _FecNacimiento
         End Get
     End Property
-    Public Property FecNacimiento As Date
+    Public Property FecRegistro As Date
         Set(value As Date)
             _FecRegistro = value
         End Set

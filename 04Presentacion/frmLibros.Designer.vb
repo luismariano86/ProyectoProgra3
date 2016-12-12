@@ -134,7 +134,7 @@ Partial Class frmLibros
         Me.cboAutor.FormattingEnabled = True
         Me.cboAutor.Location = New System.Drawing.Point(24, 293)
         Me.cboAutor.Name = "cboAutor"
-        Me.cboAutor.Size = New System.Drawing.Size(121, 21)
+        Me.cboAutor.Size = New System.Drawing.Size(228, 21)
         Me.cboAutor.TabIndex = 7
         '
         'Label8
@@ -152,7 +152,7 @@ Partial Class frmLibros
         Me.txtDescripcion.Location = New System.Drawing.Point(24, 238)
         Me.txtDescripcion.Margin = New System.Windows.Forms.Padding(9)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(275, 20)
+        Me.txtDescripcion.Size = New System.Drawing.Size(423, 20)
         Me.txtDescripcion.TabIndex = 6
         '
         'Label3

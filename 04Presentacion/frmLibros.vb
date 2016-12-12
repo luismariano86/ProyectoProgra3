@@ -18,7 +18,6 @@ Public Class frmLibros
         cboAutor.DataSource = lstAutores
         cboAutor.DisplayMember = "NombreAutor" 'Propiedad EN (Visualiza)
         cboAutor.ValueMember = "CodAutor" 'Propiedad EN (Valor Interno)
-        'Cuadro de texto = text, en combo = selectedvalue
 
 
 
@@ -35,7 +34,7 @@ Public Class frmLibros
             miLib.FecPublicacion = dtpFecPublicacion.Text
             miLib.Pais = cboPais.Text
             miLib.Descripcion = txtDescripcion.Text
-            miLib.CodAutor = cboAutor.ValueMember
+            miLib.CodAutor = cboAutor.SelectedValue
 
             Dim valida As New LibroLN
             valida.InsertarLibro(miLib)
@@ -79,12 +78,13 @@ Public Class frmLibros
                 cboPais.Text = miLib.Pais
                 txtCategoria.Text = miLib.Categoria
                 txtDescripcion.Text = miLib.Descripcion
-                cboAutor.Text = miLib.CodAutor
+                miLib.CodAutor = cboAutor.SelectedValue
 
                 btnModificar.Enabled = True
                 btnBorrar.Enabled = True
             Else
                 MessageBox.Show("No existe")
+                btnInsertar.Enabled = True
             End If
 
         Catch ex As Exception
@@ -102,7 +102,7 @@ Public Class frmLibros
             miLib.FecPublicacion = dtpFecPublicacion.Text
             miLib.Pais = cboPais.Text
             miLib.Descripcion = txtDescripcion.Text
-            miLib.CodAutor = cboAutor.Text
+            miLib.CodAutor = cboAutor.SelectedValue
 
             Dim valida As New LibroLN
             valida.ModificarLibro(miLib)
@@ -137,7 +137,7 @@ Public Class frmLibros
             miLib.FecPublicacion = dtpFecPublicacion.Text
             miLib.Pais = cboPais.Text
             miLib.Descripcion = txtDescripcion.Text
-            miLib.CodAutor = cboAutor.Text
+            miLib.CodAutor = cboAutor.SelectedValue
 
             Dim valida As New LibroLN
 

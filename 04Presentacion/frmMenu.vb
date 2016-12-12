@@ -102,4 +102,14 @@
         Dim Pantalla As New frmLibros
         Pantalla.Show()
     End Sub
+
+    Private Sub mnuPréstamo_Click(sender As Object, e As EventArgs) Handles mnuPréstamo.Click
+        Dim Pantalla As New frmPrestamos
+        Pantalla.Show()
+    End Sub
+
+    Private Sub tsbtnPrestamo_Click(sender As Object, e As EventArgs) Handles tsbtnPrestamo.Click
+        Dim Pantalla As New frmPrestamos
+        Pantalla.Show()
+    End Sub
 End Class

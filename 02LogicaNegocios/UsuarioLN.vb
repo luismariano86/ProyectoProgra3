@@ -1,11 +1,6 @@
 ﻿Imports _03Entidades
 Imports _01AccesoDatos
 Public Class UsuarioLN
-
-    Public Sub New()
-        ' Como la clase no contiene atributos, únicamente métodos, esta se podría dejar tal cual
-    End Sub
-
     Public Sub InsertarUsuario(ByVal pUsuario As UsuarioEN)
         Try
             If (pUsuario.Login.Trim().Length = 0) Then
