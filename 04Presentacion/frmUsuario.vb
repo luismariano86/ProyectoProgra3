@@ -198,4 +198,18 @@ Public Class frmUsuario
         btnModificar.Enabled = False
         btnBorrar.Enabled = False
     End Sub
+
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+        Dim Pantalla As New frmReportes
+        Dim Reporte As New rptListaUsuarios
+        Dim dstDatosReporte As New DataSet
+        Dim strConsulta As String = "SELECT Login, Clave, NombreCompleto, indAdministrador, indBibliotecario, indActivo FROM Usuarios"
+        Dim adpLista As New OleDb.OleDbDataAdapter(strConsulta, miConexion)
+        adpLista.Fill(dstDatosReporte, "ListaUsuarios")
+        Reporte.SetDataSource(dstDatosReporte)
+        Pantalla.crvVisorReportes.ReportSource = Reporte
+        Pantalla.Text = “Listado de Usuarios”
+        Pantalla.ShowDialog()
+
+    End Sub
 End Class

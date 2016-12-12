@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class rptListaEmpleados
+Public Class rptListaUsuarios
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class rptListaEmpleados
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "rptListaEmpleados.rpt"
+            Return "rptListaUsuarios.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class rptListaEmpleados
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "_04Presentacion.rptListaEmpleados.rpt"
+            Return "_04Presentacion.rptListaUsuarios.rpt"
         End Get
         Set
             'Do nothing
@@ -94,7 +94,7 @@ Public Class rptListaEmpleados
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedrptListaEmpleados
+Public Class CachedrptListaUsuarios
     Inherits Component
     Implements ICachedReport
     
@@ -136,7 +136,7 @@ Public Class CachedrptListaEmpleados
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As rptListaEmpleados = New rptListaEmpleados()
+        Dim rpt As rptListaUsuarios = New rptListaUsuarios()
         rpt.Site = Me.Site
         Return rpt
     End Function

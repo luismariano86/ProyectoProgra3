@@ -198,4 +198,21 @@ Public Class frmLibros
         btnModificar.Enabled = False
         btnBorrar.Enabled = False
     End Sub
+
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+        Dim Pantalla As New frmReportes
+        Dim Reporte As New rptListaLibros
+        Dim dstDatosReporte As New DataSet
+        Dim strConsulta As String = "SELECT ISBN, TituloCompleto, Editorial, Categoria, FecPublicacion, Pais, Descripcion, CodAutor FROM Libros"
+        Dim adpLista As New OleDb.OleDbDataAdapter(strConsulta, miConexion)
+        adpLista.Fill(dstDatosReporte, "ListaLibros")
+        Reporte.SetDataSource(dstDatosReporte)
+        Reporte.PrintOptions.PaperOrientation = CrystalDecisions.Shared.PaperOrientation.Landscape
+        Pantalla.crvVisorReportes.ReportSource = Reporte
+        Pantalla.Text = “Listado de Libros”
+        Pantalla.ShowDialog()
+
+    End Sub
+
+
 End Class

@@ -45,12 +45,14 @@ Partial Class frmLibros
         Me.txtEditorial = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.btnImprimir = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(281, 426)
+        Me.btnSalir.Location = New System.Drawing.Point(358, 426)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(113, 23)
         Me.btnSalir.TabIndex = 5
@@ -59,7 +61,7 @@ Partial Class frmLibros
         '
         'btnLimpiarCampos
         '
-        Me.btnLimpiarCampos.Location = New System.Drawing.Point(71, 426)
+        Me.btnLimpiarCampos.Location = New System.Drawing.Point(202, 426)
         Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
         Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
         Me.btnLimpiarCampos.TabIndex = 4
@@ -274,11 +276,32 @@ Partial Class frmLibros
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Fecha de Publicación"
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(30, 429)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(89, 13)
+        Me.Label9.TabIndex = 42
+        Me.Label9.Text = "Imprimir Registros"
+        '
+        'btnImprimir
+        '
+        Me.btnImprimir.Image = Global._04Presentacion.My.Resources.Resources.printer2
+        Me.btnImprimir.Location = New System.Drawing.Point(125, 418)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(44, 39)
+        Me.btnImprimir.TabIndex = 43
+        Me.btnImprimir.UseVisualStyleBackColor = True
+        '
         'frmLibros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(505, 473)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnLimpiarCampos)
         Me.Controls.Add(Me.btnBorrar)
@@ -287,10 +310,11 @@ Partial Class frmLibros
         Me.Controls.Add(Me.btnInsertar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmLibros"
-        Me.Text = "frmLibros"
+        Me.Text = "Libros"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -317,4 +341,6 @@ Partial Class frmLibros
     Friend WithEvents Label3 As Label
     Friend WithEvents cboPais As ComboBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents btnImprimir As Button
 End Class

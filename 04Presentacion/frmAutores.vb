@@ -133,4 +133,19 @@ Public Class frmAutores
         btnModificar.Enabled = False
         btnBorrar.Enabled = False
     End Sub
+
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+
+        Dim Pantalla As New frmReportes
+        Dim Reporte As New rptListaAutores
+        Dim dstDatosReporte As New DataSet
+        Dim strConsulta As String = "SELECT CodAutor, NombreAutor, Nacionalidad FROM Autores"
+        Dim adpLista As New OleDb.OleDbDataAdapter(strConsulta, miConexion)
+        adpLista.Fill(dstDatosReporte, "ListaAutores")
+        Reporte.SetDataSource(dstDatosReporte)
+        Pantalla.crvVisorReportes.ReportSource = Reporte
+        Pantalla.Text = “Listado de Autores”
+        Pantalla.ShowDialog()
+
+    End Sub
 End Class

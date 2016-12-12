@@ -41,6 +41,8 @@ Partial Class frmUsuario
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnLimpiarCampos = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.btnImprimir = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -228,7 +230,7 @@ Partial Class frmUsuario
         '
         'btnLimpiarCampos
         '
-        Me.btnLimpiarCampos.Location = New System.Drawing.Point(103, 303)
+        Me.btnLimpiarCampos.Location = New System.Drawing.Point(238, 303)
         Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
         Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
         Me.btnLimpiarCampos.TabIndex = 28
@@ -237,18 +239,39 @@ Partial Class frmUsuario
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(313, 303)
+        Me.btnSalir.Location = New System.Drawing.Point(390, 303)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(113, 23)
         Me.btnSalir.TabIndex = 29
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(51, 306)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(89, 13)
+        Me.Label7.TabIndex = 40
+        Me.Label7.Text = "Imprimir Registros"
+        '
+        'btnImprimir
+        '
+        Me.btnImprimir.Image = Global._04Presentacion.My.Resources.Resources.printer2
+        Me.btnImprimir.Location = New System.Drawing.Point(146, 295)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(44, 39)
+        Me.btnImprimir.TabIndex = 41
+        Me.btnImprimir.UseVisualStyleBackColor = True
+        '
         'frmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(570, 347)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnLimpiarCampos)
         Me.Controls.Add(Me.btnBorrar)
@@ -263,6 +286,7 @@ Partial Class frmUsuario
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -285,4 +309,6 @@ Partial Class frmUsuario
     Friend WithEvents Label2 As Label
     Friend WithEvents btnLimpiarCampos As Button
     Friend WithEvents btnSalir As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents btnImprimir As Button
 End Class

@@ -30,25 +30,15 @@ Partial Class frmLogin
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
-        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
         Me.UsernameLabel = New System.Windows.Forms.Label()
         Me.PasswordLabel = New System.Windows.Forms.Label()
         Me.txtLogin = New System.Windows.Forms.TextBox()
         Me.txtClave = New System.Windows.Forms.TextBox()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'LogoPictureBox
-        '
-        Me.LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), System.Drawing.Image)
-        Me.LogoPictureBox.Location = New System.Drawing.Point(0, 0)
-        Me.LogoPictureBox.Name = "LogoPictureBox"
-        Me.LogoPictureBox.Size = New System.Drawing.Size(165, 193)
-        Me.LogoPictureBox.TabIndex = 0
-        Me.LogoPictureBox.TabStop = False
         '
         'UsernameLabel
         '
@@ -74,7 +64,7 @@ Partial Class frmLogin
         Me.txtLogin.Name = "txtLogin"
         Me.txtLogin.Size = New System.Drawing.Size(220, 20)
         Me.txtLogin.TabIndex = 1
-        Me.txtLogin.Text = "123"
+        Me.txtLogin.Text = "magonz"
         '
         'txtClave
         '
@@ -83,7 +73,7 @@ Partial Class frmLogin
         Me.txtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtClave.Size = New System.Drawing.Size(220, 20)
         Me.txtClave.TabIndex = 3
-        Me.txtClave.Text = "123"
+        Me.txtClave.Text = "12345678"
         '
         'btnAceptar
         '
@@ -101,6 +91,16 @@ Partial Class frmLogin
         Me.btnCancelar.Size = New System.Drawing.Size(94, 23)
         Me.btnCancelar.TabIndex = 5
         Me.btnCancelar.Text = "&Cancelar"
+        '
+        'LogoPictureBox
+        '
+        Me.LogoPictureBox.Image = Global._04Presentacion.My.Resources.Resources.logo_icono_168x200
+        Me.LogoPictureBox.InitialImage = Global._04Presentacion.My.Resources.Resources.logo_icono_168x200
+        Me.LogoPictureBox.Location = New System.Drawing.Point(0, 0)
+        Me.LogoPictureBox.Name = "LogoPictureBox"
+        Me.LogoPictureBox.Size = New System.Drawing.Size(165, 193)
+        Me.LogoPictureBox.TabIndex = 0
+        Me.LogoPictureBox.TabStop = False
         '
         'frmLogin
         '

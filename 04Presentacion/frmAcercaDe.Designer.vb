@@ -146,7 +146,7 @@ Partial Class frmAcercaDe
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAceptar)
         Me.Name = "frmAcercaDe"
-        Me.Text = "frmAcercaDe"
+        Me.Text = "Acerca de..."
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

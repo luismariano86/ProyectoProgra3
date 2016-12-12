@@ -14,43 +14,26 @@
 
     Private Sub frmMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         sslblFecha.Text = Date.Today.ToLongDateString
-        sslblTipoUsuario.Text = "Nivel de Usuario: "
-        sslblUsuario.Text = "Usuario: "
-
-        If user.IndBibliotecario Then
-            mnuPrestamosFechas.Enabled = False
-            mnuUsuarios.Enabled = False
-
+        Dim NivelUsuario As String
+        If user.IndAdministrador = True Then
+            NivelUsuario = "Administrador"
+            sslblTipoUsuario.Text = "Nivel de Usuario: " & NivelUsuario
+        ElseIf user.IndBibliotecario = True
+            NivelUsuario = "Bibliotecario"
+            mnuAcercaDe.Visible = False
+            mnuAutores.Visible = False
+            mnuLibros.Visible = False
+            mnuReportes.Visible = False
+            mnuUsuarios.Visible = False
+            tsbtnAutores.Visible = False
+            tsbtnLibros.Visible = False
+            tsbtnUsuarios.Visible = False
+            sslblTipoUsuario.Text = "Nivel de Usuario: " & NivelUsuario
         End If
-
+        sslblUsuario.Text = "Usuario: " & user.Login
     End Sub
 
     Private Sub ReporteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles mnuLibrosXAutor.Click
-
-        'Se crea una instancia de la pantalla que muestra reportes
-        Dim Pantalla As New frmReportes
-
-        'Se crea una instancia del reporte que deseamos mostrar
-        Dim Reporte As New rptListaEmpleados
-
-        'Se crea una instancia del dataset para contener los datos del reporte
-        Dim dstDatosReporte As New DataSet
-
-        'La consulta para obtener los datos: Cedula y Nombre_Completo que serían campos de una posible tabla llamada CLIENTE
-        Dim strConsulta As String = "SELECT Login, Clave, NombreCompleto, indAdministrador, indBibliotecario, indActivo FROM USUARIOS"
-
-        'Se prepara el adaptador para indicarle cual consulta tiene que realizar y la base de datos donde la va a realizar.
-        Dim adpLista As New OleDb.OleDbDataAdapter(strConsulta, miConexion)
-
-        adpLista.Fill(dstDatosReporte, "ListaEmpleados")  'ListaClientes corresponde al nombre de la tabla que se dibujó en el dataset con la cual se realizó el reporte. En caso de no ser nombrado igual, los datos NO SE DESPLEGARAN.
-
-        'Se le asignan los datos a mostrar al reporte
-        Reporte.SetDataSource(dstDatosReporte)
-
-        'La pantalla que muestra reportes debe contener el control llamado crvReporte. Que es un control de tipo CrystalReportViewr el cual se encarga de mostrar o contener realmente que se desea visualizar
-        Pantalla.crvVisorReporte.ReportSource = Reporte
-        Pantalla.Text = “Listado de Empleados”
-        Pantalla.ShowDialog()
 
     End Sub
 
@@ -85,7 +68,7 @@
         Pantalla.Show()
     End Sub
 
-    Private Sub mnuCientes_Click(sender As Object, e As EventArgs) Handles mnuCientes.Click
+    Private Sub mnuCientes_Click(sender As Object, e As EventArgs) Handles mnuClientes.Click
         Dim Pantalla As New frmClientes
         Pantalla.Show()
     End Sub
@@ -117,6 +100,16 @@
 
     Private Sub mnuAcercaDe_Click(sender As Object, e As EventArgs) Handles mnuAcercaDe.Click
         Dim Pantalla As New frmAcercaDe
+        Pantalla.Show()
+    End Sub
+
+    Private Sub tsbtnDevolucion_Click(sender As Object, e As EventArgs) Handles tsbtnDevolucion.Click
+        Dim Pantalla As New frmDevolucion
+        Pantalla.Show()
+    End Sub
+
+    Private Sub mnuDevolucion_Click(sender As Object, e As EventArgs) Handles mnuDevolucion.Click
+        Dim Pantalla As New frmDevolucion
         Pantalla.Show()
     End Sub
 End Class

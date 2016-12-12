@@ -1,11 +1,12 @@
 ﻿Imports _03Entidades
 Imports _02LogicaNegocios
-Public Class frmPrestamos
 
+
+Public Class frmDevolucion
     Dim lstClientes As New List(Of ClienteEN)
     Dim lstLibros As New List(Of LibroEN)
-    Private Sub frmPrestamos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    Private Sub frmDevolucion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblUsuActivo.Text = user.Login
 
         Dim validaClientes As New ClienteLN
@@ -22,49 +23,10 @@ Public Class frmPrestamos
         cboLibros.ValueMember = "ISBN" 'Propiedad EN (Valor Interno)
         cboLibros.Text = ""
 
+
     End Sub
-    Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
-
-        Try
-            Dim miPrest As New PrestamoEN()
-            miPrest.CodPrestamo = txtCodPrestamo.Text
-            miPrest.Cedula = cboClientes.SelectedValue
-            miPrest.ISBN = cboLibros.SelectedValue
-            miPrest.Monto = txtMonto.Text
-            miPrest.FecPrestamo = dtpFecPrestamo.Text
-            miPrest.FecDevolucion = dtpFecDevolucion.Text
-            If rbtnSi.Checked Then
-                miPrest.IndDevuelto = True
-            End If
-            If rbtnNo.Checked Then
-                miPrest.IndDevuelto = False
-            End If
-            miPrest.Observaciones = txtObservacion.Text
-            miPrest.LoginUsuario = lblUsuActivo.Text
-
-            Dim valida As New PrestamoLN
-            valida.InsertarPrestamo(miPrest)
-            MessageBox.Show("El Prestamo ha sido Creado con Exito!")
-
-
-            txtCodPrestamo.Clear()
-            rbtnSi.Checked = False
-            rbtnNo.Checked = False
-            txtObservacion.Clear()
-            txtMonto.Clear()
-            cboClientes.Text = ""
-            cboLibros.Text = ""
-            dtpFecDevolucion.Value = Today
-            dtpFecPrestamo.Value = Today
-
-
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Sub
-
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+
         txtCodPrestamo.Clear()
         rbtnSi.Checked = False
         rbtnNo.Checked = False
@@ -74,11 +36,11 @@ Public Class frmPrestamos
         cboLibros.Text = ""
         dtpFecDevolucion.Value = Today
         dtpFecPrestamo.Value = Today
-        btnInsertar.Enabled = False
+
 
         Try
             Dim strCodPrestamo As String
-            strCodPrestamo = InputBox("Digite el CodPrestamo del Prestamo a buscar")
+            strCodPrestamo = InputBox("Digite el CodPrestamo del Prestamo para Devolver")
 
             Dim miPrest As PrestamoEN = Nothing
 
@@ -113,10 +75,10 @@ Public Class frmPrestamos
                 lblUsuActivo.Text = miPrest.LoginUsuario
 
                 btnModificar.Enabled = True
-                btnBorrar.Enabled = True
+
             Else
                 MessageBox.Show("No existe")
-                btnInsertar.Enabled = True
+
 
             End If
 
@@ -138,7 +100,7 @@ Public Class frmPrestamos
                 miPrest.IndDevuelto = True
             End If
             If rbtnNo.Checked Then
-                miPrest.IndDevuelto = False
+                miPrest.IndDevuelto = True
             End If
             miPrest.Observaciones = txtObservacion.Text
             miPrest.LoginUsuario = lblUsuActivo.Text
@@ -161,55 +123,9 @@ Public Class frmPrestamos
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-        btnInsertar.Enabled = True
         btnModificar.Enabled = False
-        btnBorrar.Enabled = False
+
     End Sub
-
-    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-
-        Try
-            Dim miPrest As New PrestamoEN()
-            miPrest.CodPrestamo = txtCodPrestamo.Text
-            miPrest.Cedula = cboClientes.SelectedValue
-            miPrest.ISBN = cboLibros.SelectedValue
-            miPrest.Monto = txtMonto.Text
-            miPrest.FecPrestamo = dtpFecPrestamo.Text
-            miPrest.FecDevolucion = dtpFecDevolucion.Text
-            If rbtnSi.Checked Then
-                miPrest.IndDevuelto = True
-            End If
-            If rbtnNo.Checked Then
-                miPrest.IndDevuelto = True
-            End If
-            miPrest.Observaciones = txtObservacion.Text
-            miPrest.LoginUsuario = lblUsuActivo.Text
-
-            Dim valida As New PrestamoLN
-
-            Dim intOption As Integer
-            intOption = MessageBox.Show("Realmente Desea Eliminar el Prestamo?", "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
-            If intOption = 6 Then
-                valida.BorrarPrestamo(miPrest)
-
-                txtCodPrestamo.Clear()
-                cboClientes.ResetText()
-                cboClientes.ResetText()
-                rbtnSi.Checked = False
-                rbtnNo.Checked = False
-                txtObservacion.Clear()
-                txtMonto.Clear()
-
-                MessageBox.Show("El Prestamo ha sido Eliminado con Exito!")
-                btnInsertar.Enabled = True
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-        btnModificar.Enabled = False
-        btnBorrar.Enabled = False
-    End Sub
-
     Private Sub btnLimpiarCampos_Click(sender As Object, e As EventArgs) Handles btnLimpiarCampos.Click
         txtCodPrestamo.Clear()
         rbtnSi.Checked = False
@@ -225,11 +141,6 @@ Public Class frmPrestamos
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
-    End Sub
-
-    Private Sub frmPrestamo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        btnModificar.Enabled = False
-        btnBorrar.Enabled = False
     End Sub
 
 

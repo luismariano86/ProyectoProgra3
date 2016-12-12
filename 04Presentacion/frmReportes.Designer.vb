@@ -22,33 +22,32 @@ Partial Class frmReportes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.crvVisorReporte = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.crvVisorReportes = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.SuspendLayout()
         '
-        'crvVisorReporte
+        'crvVisorReportes
         '
-        Me.crvVisorReporte.ActiveViewIndex = -1
-        Me.crvVisorReporte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.crvVisorReporte.Cursor = System.Windows.Forms.Cursors.Default
-        Me.crvVisorReporte.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.crvVisorReporte.Location = New System.Drawing.Point(0, 0)
-        Me.crvVisorReporte.Name = "crvVisorReporte"
-        Me.crvVisorReporte.ShowGroupTreeButton = False
-        Me.crvVisorReporte.Size = New System.Drawing.Size(587, 510)
-        Me.crvVisorReporte.TabIndex = 0
-        Me.crvVisorReporte.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
+        Me.crvVisorReportes.ActiveViewIndex = -1
+        Me.crvVisorReportes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.crvVisorReportes.Cursor = System.Windows.Forms.Cursors.Default
+        Me.crvVisorReportes.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.crvVisorReportes.Location = New System.Drawing.Point(0, 0)
+        Me.crvVisorReportes.Name = "crvVisorReportes"
+        Me.crvVisorReportes.Size = New System.Drawing.Size(794, 608)
+        Me.crvVisorReportes.TabIndex = 0
+        Me.crvVisorReportes.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
         'frmReportes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(587, 510)
-        Me.Controls.Add(Me.crvVisorReporte)
+        Me.ClientSize = New System.Drawing.Size(794, 608)
+        Me.Controls.Add(Me.crvVisorReportes)
         Me.Name = "frmReportes"
         Me.Text = "frmReportes"
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents crvVisorReporte As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents crvVisorReportes As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

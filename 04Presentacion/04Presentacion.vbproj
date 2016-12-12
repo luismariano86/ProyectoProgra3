@@ -79,12 +79,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="rptListaLibros.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptListaLibros.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="dsReportes.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsReportes.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dsReportes.vb">
       <DependentUpon>dsReportes.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmAcercaDe.Designer.vb">
@@ -103,6 +106,12 @@
       <DependentUpon>frmClientes.vb</DependentUpon>
     </Compile>
     <Compile Include="frmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDevolucion.Designer.vb">
+      <DependentUpon>frmDevolucion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDevolucion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLibros.Designer.vb">
@@ -135,13 +144,13 @@
     <Compile Include="frmReportes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ConexionBD.vb" />
     <Compile Include="frmUsuario.Designer.vb">
       <DependentUpon>frmUsuario.vb</DependentUpon>
     </Compile>
     <Compile Include="frmUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -157,14 +166,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="rptListaEmpleados.vb">
+    <Compile Include="rptListaAutores.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>rptListaEmpleados.rpt</DependentUpon>
+      <DependentUpon>rptListaAutores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptListaClientes.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptListaClientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptListaUsuarios.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptListaUsuarios.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="rptListaLibros.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListaLibros.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAcercaDe.resx">
       <DependentUpon>frmAcercaDe.vb</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClientes.resx">
       <DependentUpon>frmClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDevolucion.resx">
+      <DependentUpon>frmDevolucion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLibros.resx">
       <DependentUpon>frmLibros.vb</DependentUpon>
@@ -198,9 +226,17 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="rptListaEmpleados.rpt">
+    <EmbeddedResource Include="rptListaAutores.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptListaEmpleados.vb</LastGenOutput>
+      <LastGenOutput>rptListaAutores.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptListaClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListaClientes.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptListaUsuarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListaUsuarios.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -244,6 +280,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo_latina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-icono-168x200.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

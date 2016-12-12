@@ -41,12 +41,14 @@ Partial Class frmClientes
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.btnImprimir = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(288, 378)
+        Me.btnSalir.Location = New System.Drawing.Point(365, 378)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(113, 23)
         Me.btnSalir.TabIndex = 5
@@ -55,7 +57,7 @@ Partial Class frmClientes
         '
         'btnLimpiarCampos
         '
-        Me.btnLimpiarCampos.Location = New System.Drawing.Point(78, 378)
+        Me.btnLimpiarCampos.Location = New System.Drawing.Point(215, 378)
         Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
         Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
         Me.btnLimpiarCampos.TabIndex = 4
@@ -231,10 +233,31 @@ Partial Class frmClientes
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Fecha de Nacimiento"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(32, 381)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(89, 13)
+        Me.Label7.TabIndex = 38
+        Me.Label7.Text = "Imprimir Registros"
+        '
+        'btnImprimir
+        '
+        Me.btnImprimir.Image = Global._04Presentacion.My.Resources.Resources.printer2
+        Me.btnImprimir.Location = New System.Drawing.Point(127, 370)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(44, 39)
+        Me.btnImprimir.TabIndex = 39
+        Me.btnImprimir.UseVisualStyleBackColor = True
+        '
         'frmClientes
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(509, 421)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnLimpiarCampos)
         Me.Controls.Add(Me.btnBorrar)
@@ -247,6 +270,7 @@ Partial Class frmClientes
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -269,4 +293,6 @@ Partial Class frmClientes
     Friend WithEvents Label2 As Label
     Friend WithEvents txtCedula As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents btnImprimir As Button
 End Class

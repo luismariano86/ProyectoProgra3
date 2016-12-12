@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmPrestamos
+Partial Class frmDevolucion
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -26,7 +26,6 @@ Partial Class frmPrestamos
         Me.btnLimpiarCampos = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.btnInsertar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.lblUsuActivo = New System.Windows.Forms.Label()
@@ -47,7 +46,6 @@ Partial Class frmPrestamos
         Me.txtCodPrestamo = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.btnBorrar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -58,16 +56,16 @@ Partial Class frmPrestamos
         Me.btnSalir.Location = New System.Drawing.Point(281, 426)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(113, 23)
-        Me.btnSalir.TabIndex = 12
+        Me.btnSalir.TabIndex = 19
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
         'btnLimpiarCampos
         '
-        Me.btnLimpiarCampos.Location = New System.Drawing.Point(71, 426)
+        Me.btnLimpiarCampos.Location = New System.Drawing.Point(120, 426)
         Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
         Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
-        Me.btnLimpiarCampos.TabIndex = 11
+        Me.btnLimpiarCampos.TabIndex = 18
         Me.btnLimpiarCampos.Text = "Limpiar Campos"
         Me.btnLimpiarCampos.UseVisualStyleBackColor = True
         '
@@ -76,7 +74,7 @@ Partial Class frmPrestamos
         Me.btnModificar.Location = New System.Drawing.Point(281, 374)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(75, 23)
-        Me.btnModificar.TabIndex = 9
+        Me.btnModificar.TabIndex = 16
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
@@ -85,18 +83,9 @@ Partial Class frmPrestamos
         Me.btnBuscar.Location = New System.Drawing.Point(157, 374)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscar.TabIndex = 8
+        Me.btnBuscar.TabIndex = 15
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'btnInsertar
-        '
-        Me.btnInsertar.Location = New System.Drawing.Point(33, 374)
-        Me.btnInsertar.Name = "btnInsertar"
-        Me.btnInsertar.Size = New System.Drawing.Size(75, 23)
-        Me.btnInsertar.TabIndex = 7
-        Me.btnInsertar.Text = "Insertar"
-        Me.btnInsertar.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -121,7 +110,7 @@ Partial Class frmPrestamos
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(9)
         Me.GroupBox1.Size = New System.Drawing.Size(465, 333)
-        Me.GroupBox1.TabIndex = 13
+        Me.GroupBox1.TabIndex = 20
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingreso de Datos"
         '
@@ -147,6 +136,7 @@ Partial Class frmPrestamos
         '
         'cboLibros
         '
+        Me.cboLibros.Enabled = False
         Me.cboLibros.FormattingEnabled = True
         Me.cboLibros.Location = New System.Drawing.Point(43, 116)
         Me.cboLibros.Name = "cboLibros"
@@ -155,6 +145,7 @@ Partial Class frmPrestamos
         '
         'txtObservacion
         '
+        Me.txtObservacion.Enabled = False
         Me.txtObservacion.Location = New System.Drawing.Point(44, 228)
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
@@ -198,6 +189,7 @@ Partial Class frmPrestamos
         '
         'dtpFecDevolucion
         '
+        Me.dtpFecDevolucion.Enabled = False
         Me.dtpFecDevolucion.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFecDevolucion.Location = New System.Drawing.Point(278, 171)
         Me.dtpFecDevolucion.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
@@ -217,6 +209,7 @@ Partial Class frmPrestamos
         '
         'cboClientes
         '
+        Me.cboClientes.Enabled = False
         Me.cboClientes.FormattingEnabled = True
         Me.cboClientes.Location = New System.Drawing.Point(278, 57)
         Me.cboClientes.Name = "cboClientes"
@@ -245,6 +238,7 @@ Partial Class frmPrestamos
         '
         'txtMonto
         '
+        Me.txtMonto.Enabled = False
         Me.txtMonto.Location = New System.Drawing.Point(278, 116)
         Me.txtMonto.Margin = New System.Windows.Forms.Padding(9)
         Me.txtMonto.Name = "txtMonto"
@@ -273,6 +267,7 @@ Partial Class frmPrestamos
         '
         'dtpFecPrestamo
         '
+        Me.dtpFecPrestamo.Enabled = False
         Me.dtpFecPrestamo.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFecPrestamo.Location = New System.Drawing.Point(43, 170)
         Me.dtpFecPrestamo.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
@@ -282,6 +277,7 @@ Partial Class frmPrestamos
         '
         'txtCodPrestamo
         '
+        Me.txtCodPrestamo.Enabled = False
         Me.txtCodPrestamo.Location = New System.Drawing.Point(43, 57)
         Me.txtCodPrestamo.Margin = New System.Windows.Forms.Padding(9)
         Me.txtCodPrestamo.Name = "txtCodPrestamo"
@@ -308,29 +304,18 @@ Partial Class frmPrestamos
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Fecha de Prestamo"
         '
-        'btnBorrar
-        '
-        Me.btnBorrar.Location = New System.Drawing.Point(396, 374)
-        Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBorrar.TabIndex = 10
-        Me.btnBorrar.Text = "Borrar"
-        Me.btnBorrar.UseVisualStyleBackColor = True
-        '
-        'frmPrestamos
+        'frmDevolucion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(503, 464)
+        Me.ClientSize = New System.Drawing.Size(503, 472)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnLimpiarCampos)
-        Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnBuscar)
-        Me.Controls.Add(Me.btnInsertar)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "frmPrestamos"
-        Me.Text = "Prestamo de Libros"
+        Me.Name = "frmDevolucion"
+        Me.Text = "frmDevolucion"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -345,8 +330,14 @@ Partial Class frmPrestamos
     Friend WithEvents btnLimpiarCampos As Button
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnBuscar As Button
-    Friend WithEvents btnInsertar As Button
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents lblUsuActivo As Label
+    Friend WithEvents cboLibros As ComboBox
+    Friend WithEvents txtObservacion As TextBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents rbtnNo As RadioButton
+    Friend WithEvents rbtnSi As RadioButton
     Friend WithEvents dtpFecDevolucion As DateTimePicker
     Friend WithEvents Label4 As Label
     Friend WithEvents cboClientes As ComboBox
@@ -359,12 +350,4 @@ Partial Class frmPrestamos
     Friend WithEvents txtCodPrestamo As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtObservacion As TextBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents rbtnNo As RadioButton
-    Friend WithEvents rbtnSi As RadioButton
-    Friend WithEvents cboLibros As ComboBox
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents lblUsuActivo As Label
-    Friend WithEvents btnBorrar As Button
 End Class

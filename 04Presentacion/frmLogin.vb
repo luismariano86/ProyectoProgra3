@@ -12,11 +12,13 @@ Public Class frmLogin
         user = valida.ObtenerUsuarioPorLogin(strLogin)
 
         If IsNothing(user) Then
-            MessageBox.Show("No existe")
+            MessageBox.Show("No existe el usuario")
             Application.Exit()
         ElseIf Not user.Clave = txtClave.Text Then
             MessageBox.Show("No coincide su clave")
             Application.Exit()
+        ElseIf user.IndActivo = False
+            MessageBox.Show("Su Usuario esta Inactivo, contactar al administrador")
         Else
             MessageBox.Show("BIENVENIDO")
             Me.DialogResult = DialogResult.Yes

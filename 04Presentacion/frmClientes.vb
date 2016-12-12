@@ -146,4 +146,16 @@ Public Class frmClientes
         btnBorrar.Enabled = False
     End Sub
 
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+        Dim Pantalla As New frmReportes
+        Dim Reporte As New rptListaClientes
+        Dim dstDatosReporte As New DataSet
+        Dim strConsulta As String = "SELECT Cedula, NombreCompleto, Telefono, FecNacimiento, FecRegistro, DireccionExacta FROM Clientes"
+        Dim adpLista As New OleDb.OleDbDataAdapter(strConsulta, miConexion)
+        adpLista.Fill(dstDatosReporte, "ListaClientes")
+        Reporte.SetDataSource(dstDatosReporte)
+        Pantalla.crvVisorReportes.ReportSource = Reporte
+        Pantalla.Text = “Listado de Clientes”
+        Pantalla.ShowDialog()
+    End Sub
 End Class
