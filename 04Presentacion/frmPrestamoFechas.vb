@@ -10,7 +10,7 @@
         Dim FecInicio As Date = dtpFecInicio.Text
         Dim FecFinal As Date = dtpFecFinal.Text
 
-        Dim strConsulta As String = "SELECT CodPrestamo, Cedula, ISBN, Monto, FecPrestamo, FecDevolucion, IndDevuelto, Observaciones, LoginUsuario FROM Prestamos WHERE (((Prestamos.FecPrestamo)>=[FecInicio] And (Prestamos.FecPrestamo)<=[FecFinal]))"
+        Dim strConsulta As String = "SELECT CodPrestamo, Cedula, ISBN, Monto, FecPrestamo, FecDevolucion, IndDevuelto, Observaciones, LoginUsuario FROM Prestamos WHERE FecPrestamo >= #" & FecInicio.ToShortDateString & "# AND FecPrestamo <= #" & FecFinal.ToShortDateString & "# "
         Dim adpLista As New OleDb.OleDbDataAdapter(strConsulta, miConexion)
         adpLista.Fill(dstDatosReporte, "PrestamosFechas")
         Reporte.SetDataSource(dstDatosReporte)

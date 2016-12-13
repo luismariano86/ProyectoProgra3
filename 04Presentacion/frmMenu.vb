@@ -34,7 +34,8 @@
     End Sub
 
     Private Sub ReporteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles mnuLibrosXAutor.Click
-
+        Dim Pantalla As New frmLibrosAutor
+        Pantalla.Show()
     End Sub
 
     Private Sub mnuUsuarios_Click(sender As Object, e As EventArgs) Handles mnuUsuarios.Click

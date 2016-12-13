@@ -79,6 +79,33 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsReportes.vb">
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmLibrosAutor.Designer.vb">
+      <DependentUpon>frmLibrosAutor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLibrosAutor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrestamoFechas.Designer.vb">
+      <DependentUpon>frmPrestamoFechas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrestamoFechas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptLibrosAutor.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLibrosAutor.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptListaLibros.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -184,8 +211,25 @@
       <DependentUpon>rptListaUsuarios.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptPrestamosFechas.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPrestamosFechas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLibrosAutor.resx">
+      <DependentUpon>frmLibrosAutor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptLibrosAutor.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLibrosAutor.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptListaLibros.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptListaLibros.vb</LastGenOutput>
@@ -237,6 +281,10 @@
     <EmbeddedResource Include="rptListaUsuarios.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptListaUsuarios.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPrestamosFechas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPrestamosFechas.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

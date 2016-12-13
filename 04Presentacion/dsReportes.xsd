@@ -74,6 +74,17 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="LibrosAutor" msprop:Generator_TableClassName="LibrosAutorDataTable" msprop:Generator_TableVarName="tableLibrosAutor" msprop:Generator_TablePropName="LibrosAutor" msprop:Generator_RowDeletingName="LibrosAutorRowDeleting" msprop:Generator_RowChangingName="LibrosAutorRowChanging" msprop:Generator_RowEvHandlerName="LibrosAutorRowChangeEventHandler" msprop:Generator_RowDeletedName="LibrosAutorRowDeleted" msprop:Generator_UserTableName="LibrosAutor" msprop:Generator_RowChangedName="LibrosAutorRowChanged" msprop:Generator_RowEvArgName="LibrosAutorRowChangeEvent" msprop:Generator_RowClassName="LibrosAutorRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ISBN" msprop:Generator_ColumnVarNameInTable="columnISBN" msprop:Generator_ColumnPropNameInRow="ISBN" msprop:Generator_ColumnPropNameInTable="ISBNColumn" msprop:Generator_UserColumnName="ISBN" type="xs:string" minOccurs="0" />
+              <xs:element name="TituloCompleto" msprop:Generator_ColumnVarNameInTable="columnTituloCompleto" msprop:Generator_ColumnPropNameInRow="TituloCompleto" msprop:Generator_ColumnPropNameInTable="TituloCompletoColumn" msprop:Generator_UserColumnName="TituloCompleto" type="xs:string" minOccurs="0" />
+              <xs:element name="Editorial" msprop:Generator_ColumnVarNameInTable="columnEditorial" msprop:Generator_ColumnPropNameInRow="Editorial" msprop:Generator_ColumnPropNameInTable="EditorialColumn" msprop:Generator_UserColumnName="Editorial" type="xs:string" minOccurs="0" />
+              <xs:element name="Categoria" msprop:Generator_ColumnVarNameInTable="columnCategoria" msprop:Generator_ColumnPropNameInRow="Categoria" msprop:Generator_ColumnPropNameInTable="CategoriaColumn" msprop:Generator_UserColumnName="Categoria" type="xs:string" minOccurs="0" />
+              <xs:element name="CodAutor" msprop:Generator_ColumnVarNameInTable="columnCodAutor" msprop:Generator_ColumnPropNameInRow="CodAutor" msprop:Generator_ColumnPropNameInTable="CodAutorColumn" msprop:Generator_UserColumnName="CodAutor" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

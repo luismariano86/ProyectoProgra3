@@ -20,7 +20,8 @@ Public Class frmLogin
         ElseIf user.IndActivo = False
             MessageBox.Show("Su Usuario esta Inactivo, contactar al administrador")
         Else
-            MessageBox.Show("BIENVENIDO")
+            MessageBox.Show("Bienvenido " & vbCrLf &
+                            "Sistema de Gestion Bibliotecario")
             Me.DialogResult = DialogResult.Yes
         End If
 
