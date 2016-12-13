@@ -45,8 +45,8 @@ Partial Class frmAutores
         Me.btnSalir.Location = New System.Drawing.Point(444, 273)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(113, 23)
-        Me.btnSalir.TabIndex = 36
-        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.TabIndex = 6
+        Me.btnSalir.Text = "&Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
         'btnLimpiarCampos
@@ -54,8 +54,8 @@ Partial Class frmAutores
         Me.btnLimpiarCampos.Location = New System.Drawing.Point(295, 273)
         Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
         Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
-        Me.btnLimpiarCampos.TabIndex = 35
-        Me.btnLimpiarCampos.Text = "Limpiar Campos"
+        Me.btnLimpiarCampos.TabIndex = 5
+        Me.btnLimpiarCampos.Text = "&Limpiar Campos"
         Me.btnLimpiarCampos.UseVisualStyleBackColor = True
         '
         'btnBorrar
@@ -63,8 +63,8 @@ Partial Class frmAutores
         Me.btnBorrar.Location = New System.Drawing.Point(451, 210)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBorrar.TabIndex = 34
-        Me.btnBorrar.Text = "Borrar"
+        Me.btnBorrar.TabIndex = 3
+        Me.btnBorrar.Text = "&Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = True
         '
         'btnModificar
@@ -72,8 +72,8 @@ Partial Class frmAutores
         Me.btnModificar.Location = New System.Drawing.Point(336, 210)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(75, 23)
-        Me.btnModificar.TabIndex = 33
-        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.TabIndex = 2
+        Me.btnModificar.Text = "&Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
         'btnBuscar
@@ -81,8 +81,8 @@ Partial Class frmAutores
         Me.btnBuscar.Location = New System.Drawing.Point(212, 210)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscar.TabIndex = 32
-        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TabIndex = 1
+        Me.btnBuscar.Text = "&Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'btnInsertar
@@ -90,8 +90,8 @@ Partial Class frmAutores
         Me.btnInsertar.Location = New System.Drawing.Point(88, 210)
         Me.btnInsertar.Name = "btnInsertar"
         Me.btnInsertar.Size = New System.Drawing.Size(75, 23)
-        Me.btnInsertar.TabIndex = 31
-        Me.btnInsertar.Text = "Insertar"
+        Me.btnInsertar.TabIndex = 0
+        Me.btnInsertar.Text = "&Insertar"
         Me.btnInsertar.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -107,7 +107,7 @@ Partial Class frmAutores
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(9)
         Me.GroupBox1.Size = New System.Drawing.Size(504, 155)
-        Me.GroupBox1.TabIndex = 30
+        Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingreso de Datos"
         '
@@ -117,7 +117,7 @@ Partial Class frmAutores
         Me.cbxNacionalidad.Location = New System.Drawing.Point(288, 102)
         Me.cbxNacionalidad.Name = "cbxNacionalidad"
         Me.cbxNacionalidad.Size = New System.Drawing.Size(121, 21)
-        Me.cbxNacionalidad.TabIndex = 10
+        Me.cbxNacionalidad.TabIndex = 2
         '
         'txtNombre
         '
@@ -125,7 +125,7 @@ Partial Class frmAutores
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(9)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(235, 20)
-        Me.txtNombre.TabIndex = 9
+        Me.txtNombre.TabIndex = 1
         '
         'Label4
         '
@@ -134,7 +134,7 @@ Partial Class frmAutores
         Me.Label4.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(44, 13)
-        Me.Label4.TabIndex = 8
+        Me.Label4.TabIndex = 4
         Me.Label4.Text = "Nombre"
         '
         'txtCodAutor
@@ -143,7 +143,7 @@ Partial Class frmAutores
         Me.txtCodAutor.Margin = New System.Windows.Forms.Padding(9)
         Me.txtCodAutor.Name = "txtCodAutor"
         Me.txtCodAutor.Size = New System.Drawing.Size(103, 20)
-        Me.txtCodAutor.TabIndex = 7
+        Me.txtCodAutor.TabIndex = 0
         '
         'Label1
         '
@@ -152,7 +152,7 @@ Partial Class frmAutores
         Me.Label1.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 13)
-        Me.Label1.TabIndex = 6
+        Me.Label1.TabIndex = 3
         Me.Label1.Text = "Codigo de Autor"
         '
         'Label2
@@ -162,7 +162,7 @@ Partial Class frmAutores
         Me.Label2.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 13)
-        Me.Label2.TabIndex = 2
+        Me.Label2.TabIndex = 5
         Me.Label2.Text = "Nacionalidad"
         '
         'Label3
@@ -172,7 +172,7 @@ Partial Class frmAutores
         Me.Label3.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(89, 13)
-        Me.Label3.TabIndex = 11
+        Me.Label3.TabIndex = 8
         Me.Label3.Text = "Imprimir Registros"
         '
         'btnImprimir
@@ -181,7 +181,7 @@ Partial Class frmAutores
         Me.btnImprimir.Location = New System.Drawing.Point(159, 261)
         Me.btnImprimir.Name = "btnImprimir"
         Me.btnImprimir.Size = New System.Drawing.Size(44, 39)
-        Me.btnImprimir.TabIndex = 37
+        Me.btnImprimir.TabIndex = 4
         Me.btnImprimir.UseVisualStyleBackColor = True
         '
         'frmAutores

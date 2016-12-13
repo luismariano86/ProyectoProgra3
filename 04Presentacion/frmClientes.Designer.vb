@@ -52,7 +52,7 @@ Partial Class frmClientes
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(113, 23)
         Me.btnSalir.TabIndex = 5
-        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.Text = "&Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
         'btnLimpiarCampos
@@ -61,7 +61,7 @@ Partial Class frmClientes
         Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
         Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
         Me.btnLimpiarCampos.TabIndex = 4
-        Me.btnLimpiarCampos.Text = "Limpiar Campos"
+        Me.btnLimpiarCampos.Text = "&Limpiar Campos"
         Me.btnLimpiarCampos.UseVisualStyleBackColor = True
         '
         'btnBorrar
@@ -70,7 +70,7 @@ Partial Class frmClientes
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
         Me.btnBorrar.TabIndex = 3
-        Me.btnBorrar.Text = "Borrar"
+        Me.btnBorrar.Text = "&Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = True
         '
         'btnModificar
@@ -79,7 +79,7 @@ Partial Class frmClientes
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(75, 23)
         Me.btnModificar.TabIndex = 2
-        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.Text = "&Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
         'btnBuscar
@@ -88,7 +88,7 @@ Partial Class frmClientes
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.btnBuscar.TabIndex = 1
-        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.Text = "&Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'btnInsertar
@@ -97,7 +97,7 @@ Partial Class frmClientes
         Me.btnInsertar.Name = "btnInsertar"
         Me.btnInsertar.Size = New System.Drawing.Size(75, 23)
         Me.btnInsertar.TabIndex = 0
-        Me.btnInsertar.Text = "Insertar"
+        Me.btnInsertar.Text = "&Insertar"
         Me.btnInsertar.UseVisualStyleBackColor = True
         '
         'GroupBox1

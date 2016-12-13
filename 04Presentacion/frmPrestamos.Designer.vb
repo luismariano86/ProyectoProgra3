@@ -58,8 +58,8 @@ Partial Class frmPrestamos
         Me.btnSalir.Location = New System.Drawing.Point(281, 426)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(113, 23)
-        Me.btnSalir.TabIndex = 12
-        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.TabIndex = 6
+        Me.btnSalir.Text = "&Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
         'btnLimpiarCampos
@@ -67,8 +67,8 @@ Partial Class frmPrestamos
         Me.btnLimpiarCampos.Location = New System.Drawing.Point(71, 426)
         Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
         Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
-        Me.btnLimpiarCampos.TabIndex = 11
-        Me.btnLimpiarCampos.Text = "Limpiar Campos"
+        Me.btnLimpiarCampos.TabIndex = 5
+        Me.btnLimpiarCampos.Text = "&Limpiar Campos"
         Me.btnLimpiarCampos.UseVisualStyleBackColor = True
         '
         'btnModificar
@@ -76,8 +76,8 @@ Partial Class frmPrestamos
         Me.btnModificar.Location = New System.Drawing.Point(281, 374)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(75, 23)
-        Me.btnModificar.TabIndex = 9
-        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.TabIndex = 3
+        Me.btnModificar.Text = "&Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
         '
         'btnBuscar
@@ -85,8 +85,8 @@ Partial Class frmPrestamos
         Me.btnBuscar.Location = New System.Drawing.Point(157, 374)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscar.TabIndex = 8
-        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.TabIndex = 2
+        Me.btnBuscar.Text = "&Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'btnInsertar
@@ -94,8 +94,8 @@ Partial Class frmPrestamos
         Me.btnInsertar.Location = New System.Drawing.Point(33, 374)
         Me.btnInsertar.Name = "btnInsertar"
         Me.btnInsertar.Size = New System.Drawing.Size(75, 23)
-        Me.btnInsertar.TabIndex = 7
-        Me.btnInsertar.Text = "Insertar"
+        Me.btnInsertar.TabIndex = 1
+        Me.btnInsertar.Text = "&Insertar"
         Me.btnInsertar.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -121,7 +121,7 @@ Partial Class frmPrestamos
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(9)
         Me.GroupBox1.Size = New System.Drawing.Size(465, 333)
-        Me.GroupBox1.TabIndex = 13
+        Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingreso de Datos"
         '
@@ -131,7 +131,7 @@ Partial Class frmPrestamos
         Me.GroupBox3.Location = New System.Drawing.Point(278, 270)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(119, 51)
-        Me.GroupBox3.TabIndex = 20
+        Me.GroupBox3.TabIndex = 15
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Usuario Activo"
         '
@@ -142,7 +142,7 @@ Partial Class frmPrestamos
         Me.lblUsuActivo.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.lblUsuActivo.Name = "lblUsuActivo"
         Me.lblUsuActivo.Size = New System.Drawing.Size(76, 13)
-        Me.lblUsuActivo.TabIndex = 24
+        Me.lblUsuActivo.TabIndex = 0
         Me.lblUsuActivo.Text = "Usuario Activo"
         '
         'cboLibros
@@ -151,7 +151,7 @@ Partial Class frmPrestamos
         Me.cboLibros.Location = New System.Drawing.Point(43, 116)
         Me.cboLibros.Name = "cboLibros"
         Me.cboLibros.Size = New System.Drawing.Size(171, 21)
-        Me.cboLibros.TabIndex = 21
+        Me.cboLibros.TabIndex = 2
         '
         'txtObservacion
         '
@@ -159,7 +159,7 @@ Partial Class frmPrestamos
         Me.txtObservacion.Multiline = True
         Me.txtObservacion.Name = "txtObservacion"
         Me.txtObservacion.Size = New System.Drawing.Size(217, 89)
-        Me.txtObservacion.TabIndex = 20
+        Me.txtObservacion.TabIndex = 6
         '
         'GroupBox2
         '
@@ -168,7 +168,7 @@ Partial Class frmPrestamos
         Me.GroupBox2.Location = New System.Drawing.Point(278, 208)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(119, 51)
-        Me.GroupBox2.TabIndex = 19
+        Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Devuelto"
         '
@@ -179,7 +179,7 @@ Partial Class frmPrestamos
         Me.rbtnNo.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.rbtnNo.Name = "rbtnNo"
         Me.rbtnNo.Size = New System.Drawing.Size(39, 17)
-        Me.rbtnNo.TabIndex = 15
+        Me.rbtnNo.TabIndex = 1
         Me.rbtnNo.TabStop = True
         Me.rbtnNo.Text = "No"
         Me.rbtnNo.UseVisualStyleBackColor = True
@@ -191,7 +191,7 @@ Partial Class frmPrestamos
         Me.rbtnSi.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.rbtnSi.Name = "rbtnSi"
         Me.rbtnSi.Size = New System.Drawing.Size(34, 17)
-        Me.rbtnSi.TabIndex = 14
+        Me.rbtnSi.TabIndex = 0
         Me.rbtnSi.TabStop = True
         Me.rbtnSi.Text = "Si"
         Me.rbtnSi.UseVisualStyleBackColor = True
@@ -203,7 +203,7 @@ Partial Class frmPrestamos
         Me.dtpFecDevolucion.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.dtpFecDevolucion.Name = "dtpFecDevolucion"
         Me.dtpFecDevolucion.Size = New System.Drawing.Size(116, 20)
-        Me.dtpFecDevolucion.TabIndex = 16
+        Me.dtpFecDevolucion.TabIndex = 5
         '
         'Label4
         '
@@ -212,7 +212,7 @@ Partial Class frmPrestamos
         Me.Label4.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(109, 13)
-        Me.Label4.TabIndex = 17
+        Me.Label4.TabIndex = 12
         Me.Label4.Text = "Fecha de Devolución"
         '
         'cboClientes
@@ -221,7 +221,7 @@ Partial Class frmPrestamos
         Me.cboClientes.Location = New System.Drawing.Point(278, 57)
         Me.cboClientes.Name = "cboClientes"
         Me.cboClientes.Size = New System.Drawing.Size(175, 21)
-        Me.cboClientes.TabIndex = 7
+        Me.cboClientes.TabIndex = 1
         '
         'Label8
         '
@@ -230,7 +230,7 @@ Partial Class frmPrestamos
         Me.Label8.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(39, 13)
-        Me.Label8.TabIndex = 15
+        Me.Label8.TabIndex = 8
         Me.Label8.Text = "Cliente"
         '
         'Label3
@@ -240,7 +240,7 @@ Partial Class frmPrestamos
         Me.Label3.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(67, 13)
-        Me.Label3.TabIndex = 14
+        Me.Label3.TabIndex = 13
         Me.Label3.Text = "Observación"
         '
         'txtMonto
@@ -249,7 +249,7 @@ Partial Class frmPrestamos
         Me.txtMonto.Margin = New System.Windows.Forms.Padding(9)
         Me.txtMonto.Name = "txtMonto"
         Me.txtMonto.Size = New System.Drawing.Size(119, 20)
-        Me.txtMonto.TabIndex = 2
+        Me.txtMonto.TabIndex = 3
         '
         'Label1
         '
@@ -258,7 +258,7 @@ Partial Class frmPrestamos
         Me.Label1.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(37, 13)
-        Me.Label1.TabIndex = 9
+        Me.Label1.TabIndex = 10
         Me.Label1.Text = "Monto"
         '
         'Label6
@@ -268,7 +268,7 @@ Partial Class frmPrestamos
         Me.Label6.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(30, 13)
-        Me.Label6.TabIndex = 10
+        Me.Label6.TabIndex = 9
         Me.Label6.Text = "Libro"
         '
         'dtpFecPrestamo
@@ -286,7 +286,7 @@ Partial Class frmPrestamos
         Me.txtCodPrestamo.Margin = New System.Windows.Forms.Padding(9)
         Me.txtCodPrestamo.Name = "txtCodPrestamo"
         Me.txtCodPrestamo.Size = New System.Drawing.Size(171, 20)
-        Me.txtCodPrestamo.TabIndex = 3
+        Me.txtCodPrestamo.TabIndex = 0
         '
         'Label5
         '
@@ -295,7 +295,7 @@ Partial Class frmPrestamos
         Me.Label5.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(102, 13)
-        Me.Label5.TabIndex = 11
+        Me.Label5.TabIndex = 7
         Me.Label5.Text = "Codigo de Prestamo"
         '
         'Label2
@@ -305,7 +305,7 @@ Partial Class frmPrestamos
         Me.Label2.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(99, 13)
-        Me.Label2.TabIndex = 12
+        Me.Label2.TabIndex = 11
         Me.Label2.Text = "Fecha de Prestamo"
         '
         'btnBorrar
@@ -313,8 +313,8 @@ Partial Class frmPrestamos
         Me.btnBorrar.Location = New System.Drawing.Point(396, 374)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBorrar.TabIndex = 10
-        Me.btnBorrar.Text = "Borrar"
+        Me.btnBorrar.TabIndex = 4
+        Me.btnBorrar.Text = "&Borrar"
         Me.btnBorrar.UseVisualStyleBackColor = True
         '
         'frmPrestamos

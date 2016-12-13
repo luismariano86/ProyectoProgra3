@@ -54,7 +54,7 @@ Partial Class frmLibrosAutor
         Me.btnVerLibros.Name = "btnVerLibros"
         Me.btnVerLibros.Size = New System.Drawing.Size(116, 33)
         Me.btnVerLibros.TabIndex = 15
-        Me.btnVerLibros.Text = "VerLibros"
+        Me.btnVerLibros.Text = "&VerLibros"
         Me.btnVerLibros.UseVisualStyleBackColor = True
         '
         'btnSalir
@@ -63,7 +63,7 @@ Partial Class frmLibrosAutor
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(113, 30)
         Me.btnSalir.TabIndex = 16
-        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.Text = "&Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
         'frmLibrosAutor
@@ -74,7 +74,7 @@ Partial Class frmLibrosAutor
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmLibrosAutor"
-        Me.Text = "frmLibrosAutor"
+        Me.Text = "Libros por Autor"
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 

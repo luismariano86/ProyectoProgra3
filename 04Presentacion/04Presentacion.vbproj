@@ -226,6 +226,9 @@
     <EmbeddedResource Include="frmLibrosAutor.resx">
       <DependentUpon>frmLibrosAutor.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrestamoFechas.resx">
+      <DependentUpon>frmPrestamoFechas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptLibrosAutor.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptLibrosAutor.vb</LastGenOutput>
@@ -337,6 +340,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-icono-168x200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Libros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Autor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscalibro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\devolucion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

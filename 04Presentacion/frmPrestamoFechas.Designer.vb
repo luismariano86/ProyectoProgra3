@@ -52,7 +52,7 @@ Partial Class frmPrestamoFechas
         Me.dtpFecFinal.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.dtpFecFinal.Name = "dtpFecFinal"
         Me.dtpFecFinal.Size = New System.Drawing.Size(116, 20)
-        Me.dtpFecFinal.TabIndex = 20
+        Me.dtpFecFinal.TabIndex = 1
         '
         'Label4
         '
@@ -61,7 +61,7 @@ Partial Class frmPrestamoFechas
         Me.Label4.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(29, 13)
-        Me.Label4.TabIndex = 21
+        Me.Label4.TabIndex = 3
         Me.Label4.Text = "Final"
         '
         'dtpFecInicio
@@ -71,7 +71,7 @@ Partial Class frmPrestamoFechas
         Me.dtpFecInicio.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
         Me.dtpFecInicio.Name = "dtpFecInicio"
         Me.dtpFecInicio.Size = New System.Drawing.Size(116, 20)
-        Me.dtpFecInicio.TabIndex = 18
+        Me.dtpFecInicio.TabIndex = 0
         '
         'Label2
         '
@@ -80,7 +80,7 @@ Partial Class frmPrestamoFechas
         Me.Label2.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(32, 13)
-        Me.Label2.TabIndex = 19
+        Me.Label2.TabIndex = 2
         Me.Label2.Text = "Inicio"
         '
         'btnSalir
@@ -88,8 +88,8 @@ Partial Class frmPrestamoFechas
         Me.btnSalir.Location = New System.Drawing.Point(163, 210)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(113, 30)
-        Me.btnSalir.TabIndex = 14
-        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.TabIndex = 2
+        Me.btnSalir.Text = "&Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
         'btnBuscar
@@ -97,8 +97,8 @@ Partial Class frmPrestamoFechas
         Me.btnBuscar.Location = New System.Drawing.Point(88, 146)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(116, 33)
-        Me.btnBuscar.TabIndex = 13
-        Me.btnBuscar.Text = "Generar Reporte"
+        Me.btnBuscar.TabIndex = 1
+        Me.btnBuscar.Text = "&Generar Reporte"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'frmPrestamoFechas
