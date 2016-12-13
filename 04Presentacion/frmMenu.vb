@@ -112,4 +112,9 @@
         Dim Pantalla As New frmDevolucion
         Pantalla.Show()
     End Sub
+
+    Private Sub mnuPrestamosFechas_Click(sender As Object, e As EventArgs) Handles mnuPrestamosFechas.Click
+        Dim Pantalla As New frmPrestamoFechas
+        Pantalla.Show()
+    End Sub
 End Class

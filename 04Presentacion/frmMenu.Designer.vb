@@ -75,25 +75,25 @@ Partial Class frmMenu
         'mnuAutores
         '
         Me.mnuAutores.Name = "mnuAutores"
-        Me.mnuAutores.Size = New System.Drawing.Size(119, 22)
+        Me.mnuAutores.Size = New System.Drawing.Size(152, 22)
         Me.mnuAutores.Text = "Autores"
         '
         'mnuClientes
         '
         Me.mnuClientes.Name = "mnuClientes"
-        Me.mnuClientes.Size = New System.Drawing.Size(119, 22)
+        Me.mnuClientes.Size = New System.Drawing.Size(152, 22)
         Me.mnuClientes.Text = "Clientes"
         '
         'mnuLibros
         '
         Me.mnuLibros.Name = "mnuLibros"
-        Me.mnuLibros.Size = New System.Drawing.Size(119, 22)
+        Me.mnuLibros.Size = New System.Drawing.Size(152, 22)
         Me.mnuLibros.Text = "Libros"
         '
         'mnuUsuarios
         '
         Me.mnuUsuarios.Name = "mnuUsuarios"
-        Me.mnuUsuarios.Size = New System.Drawing.Size(119, 22)
+        Me.mnuUsuarios.Size = New System.Drawing.Size(152, 22)
         Me.mnuUsuarios.Text = "Usuarios"
         '
         'mnuProcesos
@@ -106,7 +106,7 @@ Partial Class frmMenu
         'mnuPréstamo
         '
         Me.mnuPréstamo.Name = "mnuPréstamo"
-        Me.mnuPréstamo.Size = New System.Drawing.Size(134, 22)
+        Me.mnuPréstamo.Size = New System.Drawing.Size(152, 22)
         Me.mnuPréstamo.Text = "Préstamos"
         '
         'mnuDevolucion
