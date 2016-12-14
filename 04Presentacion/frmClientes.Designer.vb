@@ -22,8 +22,7 @@ Partial Class frmClientes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnSalir = New System.Windows.Forms.Button()
-        Me.btnLimpiarCampos = New System.Windows.Forms.Button()
+        Me.components = New System.ComponentModel.Container()
         Me.btnBorrar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
@@ -41,28 +40,13 @@ Partial Class frmClientes
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnImprimir = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnLimpiarCampos = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'btnSalir
-        '
-        Me.btnSalir.Location = New System.Drawing.Point(365, 378)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(113, 23)
-        Me.btnSalir.TabIndex = 5
-        Me.btnSalir.Text = "&Salir"
-        Me.btnSalir.UseVisualStyleBackColor = True
-        '
-        'btnLimpiarCampos
-        '
-        Me.btnLimpiarCampos.Location = New System.Drawing.Point(215, 378)
-        Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
-        Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
-        Me.btnLimpiarCampos.TabIndex = 4
-        Me.btnLimpiarCampos.Text = "&Limpiar Campos"
-        Me.btnLimpiarCampos.UseVisualStyleBackColor = True
         '
         'btnBorrar
         '
@@ -71,6 +55,7 @@ Partial Class frmClientes
         Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
         Me.btnBorrar.TabIndex = 3
         Me.btnBorrar.Text = "&Borrar"
+        Me.ToolTip1.SetToolTip(Me.btnBorrar, "Borrar el Cliente")
         Me.btnBorrar.UseVisualStyleBackColor = True
         '
         'btnModificar
@@ -80,6 +65,7 @@ Partial Class frmClientes
         Me.btnModificar.Size = New System.Drawing.Size(75, 23)
         Me.btnModificar.TabIndex = 2
         Me.btnModificar.Text = "&Modificar"
+        Me.ToolTip1.SetToolTip(Me.btnModificar, "Modificar un Cliente")
         Me.btnModificar.UseVisualStyleBackColor = True
         '
         'btnBuscar
@@ -89,6 +75,7 @@ Partial Class frmClientes
         Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
         Me.btnBuscar.TabIndex = 1
         Me.btnBuscar.Text = "&Buscar"
+        Me.ToolTip1.SetToolTip(Me.btnBuscar, "Buscar un Cliente")
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'btnInsertar
@@ -98,6 +85,7 @@ Partial Class frmClientes
         Me.btnInsertar.Size = New System.Drawing.Size(75, 23)
         Me.btnInsertar.TabIndex = 0
         Me.btnInsertar.Text = "&Insertar"
+        Me.ToolTip1.SetToolTip(Me.btnInsertar, "Insertar el Cliente")
         Me.btnInsertar.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -130,6 +118,7 @@ Partial Class frmClientes
         Me.txtCedula.Name = "txtCedula"
         Me.txtCedula.Size = New System.Drawing.Size(103, 20)
         Me.txtCedula.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.txtCedula, "Cedula del Cliente, minimo 8  caracteres")
         '
         'Label6
         '
@@ -166,6 +155,7 @@ Partial Class frmClientes
         Me.txtDireccionExacta.Name = "txtDireccionExacta"
         Me.txtDireccionExacta.Size = New System.Drawing.Size(428, 20)
         Me.txtDireccionExacta.TabIndex = 4
+        Me.ToolTip1.SetToolTip(Me.txtDireccionExacta, "Digitar la direccion Exacta")
         '
         'Label5
         '
@@ -194,6 +184,7 @@ Partial Class frmClientes
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(275, 20)
         Me.txtNombre.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.txtNombre, "Nombre completo")
         '
         'Label4
         '
@@ -212,6 +203,7 @@ Partial Class frmClientes
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(103, 20)
         Me.txtTelefono.TabIndex = 3
+        Me.ToolTip1.SetToolTip(Me.txtTelefono, "Telefono")
         '
         'Label1
         '
@@ -236,21 +228,42 @@ Partial Class frmClientes
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(32, 381)
+        Me.Label7.Location = New System.Drawing.Point(39, 385)
         Me.Label7.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(89, 13)
-        Me.Label7.TabIndex = 38
+        Me.Label7.TabIndex = 12
         Me.Label7.Text = "Imprimir Registros"
         '
         'btnImprimir
         '
         Me.btnImprimir.Image = Global._04Presentacion.My.Resources.Resources.printer2
-        Me.btnImprimir.Location = New System.Drawing.Point(127, 370)
+        Me.btnImprimir.Location = New System.Drawing.Point(134, 374)
         Me.btnImprimir.Name = "btnImprimir"
         Me.btnImprimir.Size = New System.Drawing.Size(44, 39)
-        Me.btnImprimir.TabIndex = 39
+        Me.btnImprimir.TabIndex = 9
+        Me.ToolTip1.SetToolTip(Me.btnImprimir, "Muestra la Lista de todos los Clientes")
         Me.btnImprimir.UseVisualStyleBackColor = True
+        '
+        'btnSalir
+        '
+        Me.btnSalir.Location = New System.Drawing.Point(382, 386)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(113, 23)
+        Me.btnSalir.TabIndex = 11
+        Me.btnSalir.Text = "&Salir"
+        Me.ToolTip1.SetToolTip(Me.btnSalir, "Salir")
+        Me.btnSalir.UseVisualStyleBackColor = True
+        '
+        'btnLimpiarCampos
+        '
+        Me.btnLimpiarCampos.Location = New System.Drawing.Point(233, 386)
+        Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
+        Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
+        Me.btnLimpiarCampos.TabIndex = 10
+        Me.btnLimpiarCampos.Text = "&Cancelar"
+        Me.ToolTip1.SetToolTip(Me.btnLimpiarCampos, "Reiniciar los Valores")
+        Me.btnLimpiarCampos.UseVisualStyleBackColor = True
         '
         'frmClientes
         '
@@ -265,6 +278,7 @@ Partial Class frmClientes
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.btnInsertar)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "frmClientes"
         Me.Text = "Clientes"
         Me.GroupBox1.ResumeLayout(False)
@@ -273,9 +287,6 @@ Partial Class frmClientes
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btnSalir As Button
-    Friend WithEvents btnLimpiarCampos As Button
     Friend WithEvents btnBorrar As Button
     Friend WithEvents btnModificar As Button
     Friend WithEvents btnBuscar As Button
@@ -293,6 +304,9 @@ Partial Class frmClientes
     Friend WithEvents Label2 As Label
     Friend WithEvents txtCedula As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents Label7 As Label
     Friend WithEvents btnImprimir As Button
+    Friend WithEvents btnSalir As Button
+    Friend WithEvents btnLimpiarCampos As Button
 End Class

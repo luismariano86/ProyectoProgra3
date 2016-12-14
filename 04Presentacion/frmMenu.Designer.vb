@@ -22,6 +22,7 @@ Partial Class frmMenu
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.mnuCatalogDatos = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuAutores = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,15 +42,16 @@ Partial Class frmMenu
         Me.sslblTipoUsuario = New System.Windows.Forms.ToolStripStatusLabel()
         Me.sslblFecha = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbtnAutores = New System.Windows.Forms.ToolStripButton()
         Me.tsbtnLibros = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsbtnDevolucion = New System.Windows.Forms.ToolStripButton()
         Me.tsbtnPrestamo = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.tsbtnUsuarios = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -184,21 +186,6 @@ Partial Class frmMenu
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 38)
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 38)
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
-        '
         'tsbtnAutores
         '
         Me.tsbtnAutores.Image = Global._04Presentacion.My.Resources.Resources.Autor
@@ -216,6 +203,11 @@ Partial Class frmMenu
         Me.tsbtnLibros.Size = New System.Drawing.Size(43, 35)
         Me.tsbtnLibros.Text = "&Libros"
         Me.tsbtnLibros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 38)
         '
         'tsbtnDevolucion
         '
@@ -235,6 +227,11 @@ Partial Class frmMenu
         Me.tsbtnPrestamo.Text = "&Préstamos"
         Me.tsbtnPrestamo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 38)
+        '
         'ToolStripButton1
         '
         Me.ToolStripButton1.Image = Global._04Presentacion.My.Resources.Resources.clientes
@@ -253,6 +250,11 @@ Partial Class frmMenu
         Me.tsbtnUsuarios.Text = "&Usuarios"
         Me.tsbtnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 38)
+        '
         'frmMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -261,6 +263,7 @@ Partial Class frmMenu
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMenu"
         Me.Text = "Biblioteca"
@@ -304,4 +307,5 @@ Partial Class frmMenu
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents tsbtnUsuarios As ToolStripButton
     Friend WithEvents tsbtnAutores As ToolStripButton
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

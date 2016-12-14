@@ -234,7 +234,7 @@ Partial Class frmUsuario
         Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
         Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
         Me.btnLimpiarCampos.TabIndex = 5
-        Me.btnLimpiarCampos.Text = "&Limpiar Campos"
+        Me.btnLimpiarCampos.Text = "&Cancelar"
         Me.btnLimpiarCampos.UseVisualStyleBackColor = True
         '
         'btnSalir
@@ -279,6 +279,7 @@ Partial Class frmUsuario
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.btnInsertar)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "frmUsuario"
         Me.Text = "Usuarios"
         Me.GroupBox1.ResumeLayout(False)

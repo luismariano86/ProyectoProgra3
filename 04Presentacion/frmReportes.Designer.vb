@@ -43,6 +43,7 @@ Partial Class frmReportes
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(794, 608)
         Me.Controls.Add(Me.crvVisorReportes)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "frmReportes"
         Me.Text = "frmReportes"
         Me.ResumeLayout(False)

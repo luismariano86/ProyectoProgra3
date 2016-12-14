@@ -22,12 +22,9 @@ Partial Class frmAutores
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnLimpiarCampos = New System.Windows.Forms.Button()
-        Me.btnBorrar = New System.Windows.Forms.Button()
-        Me.btnModificar = New System.Windows.Forms.Button()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.btnInsertar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cbxNacionalidad = New System.Windows.Forms.ComboBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
@@ -37,6 +34,11 @@ Partial Class frmAutores
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnImprimir = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.btnBorrar = New System.Windows.Forms.Button()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnInsertar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,6 +49,7 @@ Partial Class frmAutores
         Me.btnSalir.Size = New System.Drawing.Size(113, 23)
         Me.btnSalir.TabIndex = 6
         Me.btnSalir.Text = "&Salir"
+        Me.ToolTip1.SetToolTip(Me.btnSalir, "Salir")
         Me.btnSalir.UseVisualStyleBackColor = True
         '
         'btnLimpiarCampos
@@ -55,44 +58,9 @@ Partial Class frmAutores
         Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
         Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
         Me.btnLimpiarCampos.TabIndex = 5
-        Me.btnLimpiarCampos.Text = "&Limpiar Campos"
+        Me.btnLimpiarCampos.Text = "&Cancelar"
+        Me.ToolTip1.SetToolTip(Me.btnLimpiarCampos, "Reiniciar los Valores")
         Me.btnLimpiarCampos.UseVisualStyleBackColor = True
-        '
-        'btnBorrar
-        '
-        Me.btnBorrar.Location = New System.Drawing.Point(451, 210)
-        Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBorrar.TabIndex = 3
-        Me.btnBorrar.Text = "&Borrar"
-        Me.btnBorrar.UseVisualStyleBackColor = True
-        '
-        'btnModificar
-        '
-        Me.btnModificar.Location = New System.Drawing.Point(336, 210)
-        Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
-        Me.btnModificar.TabIndex = 2
-        Me.btnModificar.Text = "&Modificar"
-        Me.btnModificar.UseVisualStyleBackColor = True
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Location = New System.Drawing.Point(212, 210)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.btnBuscar.TabIndex = 1
-        Me.btnBuscar.Text = "&Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
-        'btnInsertar
-        '
-        Me.btnInsertar.Location = New System.Drawing.Point(88, 210)
-        Me.btnInsertar.Name = "btnInsertar"
-        Me.btnInsertar.Size = New System.Drawing.Size(75, 23)
-        Me.btnInsertar.TabIndex = 0
-        Me.btnInsertar.Text = "&Insertar"
-        Me.btnInsertar.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -118,6 +86,7 @@ Partial Class frmAutores
         Me.cbxNacionalidad.Name = "cbxNacionalidad"
         Me.cbxNacionalidad.Size = New System.Drawing.Size(121, 21)
         Me.cbxNacionalidad.TabIndex = 2
+        Me.ToolTip1.SetToolTip(Me.cbxNacionalidad, "Seleccion el pais donde nacio")
         '
         'txtNombre
         '
@@ -126,6 +95,7 @@ Partial Class frmAutores
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(235, 20)
         Me.txtNombre.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.txtNombre, "Nombre Completo del Autor")
         '
         'Label4
         '
@@ -144,6 +114,7 @@ Partial Class frmAutores
         Me.txtCodAutor.Name = "txtCodAutor"
         Me.txtCodAutor.Size = New System.Drawing.Size(103, 20)
         Me.txtCodAutor.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.txtCodAutor, "Codigo de Autor, no menor a 4 carateres")
         '
         'Label1
         '
@@ -182,22 +153,65 @@ Partial Class frmAutores
         Me.btnImprimir.Name = "btnImprimir"
         Me.btnImprimir.Size = New System.Drawing.Size(44, 39)
         Me.btnImprimir.TabIndex = 4
+        Me.ToolTip1.SetToolTip(Me.btnImprimir, "Muestra la Lista de todos los Autores")
         Me.btnImprimir.UseVisualStyleBackColor = True
+        '
+        'btnBorrar
+        '
+        Me.btnBorrar.Location = New System.Drawing.Point(448, 212)
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBorrar.TabIndex = 12
+        Me.btnBorrar.Text = "&Borrar"
+        Me.btnBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.ToolTip1.SetToolTip(Me.btnBorrar, "Borrar el Autor")
+        Me.btnBorrar.UseVisualStyleBackColor = True
+        '
+        'btnModificar
+        '
+        Me.btnModificar.Location = New System.Drawing.Point(333, 212)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.btnModificar.TabIndex = 11
+        Me.btnModificar.Text = "&Modificar"
+        Me.ToolTip1.SetToolTip(Me.btnModificar, "Modificar un Autor")
+        Me.btnModificar.UseVisualStyleBackColor = True
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Location = New System.Drawing.Point(209, 212)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.TabIndex = 10
+        Me.btnBuscar.Text = "&Buscar"
+        Me.ToolTip1.SetToolTip(Me.btnBuscar, "Buscar un Autor")
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'btnInsertar
+        '
+        Me.btnInsertar.Location = New System.Drawing.Point(85, 212)
+        Me.btnInsertar.Name = "btnInsertar"
+        Me.btnInsertar.Size = New System.Drawing.Size(75, 23)
+        Me.btnInsertar.TabIndex = 9
+        Me.btnInsertar.Text = "&Insertar"
+        Me.ToolTip1.SetToolTip(Me.btnInsertar, "Insertar el Autor")
+        Me.btnInsertar.UseVisualStyleBackColor = True
         '
         'frmAutores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(610, 322)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.btnImprimir)
-        Me.Controls.Add(Me.btnSalir)
-        Me.Controls.Add(Me.btnLimpiarCampos)
         Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.btnInsertar)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.btnImprimir)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.btnLimpiarCampos)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "frmAutores"
         Me.Text = "Autores"
         Me.GroupBox1.ResumeLayout(False)
@@ -209,10 +223,6 @@ Partial Class frmAutores
 
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnLimpiarCampos As Button
-    Friend WithEvents btnBorrar As Button
-    Friend WithEvents btnModificar As Button
-    Friend WithEvents btnBuscar As Button
-    Friend WithEvents btnInsertar As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label4 As Label
@@ -222,4 +232,9 @@ Partial Class frmAutores
     Friend WithEvents cbxNacionalidad As ComboBox
     Friend WithEvents btnImprimir As Button
     Friend WithEvents Label3 As Label
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents btnBorrar As Button
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents btnInsertar As Button
 End Class

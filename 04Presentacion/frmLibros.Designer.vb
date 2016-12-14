@@ -65,7 +65,7 @@ Partial Class frmLibros
         Me.btnLimpiarCampos.Name = "btnLimpiarCampos"
         Me.btnLimpiarCampos.Size = New System.Drawing.Size(112, 23)
         Me.btnLimpiarCampos.TabIndex = 4
-        Me.btnLimpiarCampos.Text = "&Limpiar Campos"
+        Me.btnLimpiarCampos.Text = "&Cancelar"
         Me.btnLimpiarCampos.UseVisualStyleBackColor = True
         '
         'btnBorrar
@@ -309,6 +309,7 @@ Partial Class frmLibros
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.btnInsertar)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "frmLibros"
         Me.Text = "Libros"
         Me.GroupBox1.ResumeLayout(False)

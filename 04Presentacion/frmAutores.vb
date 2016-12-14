@@ -14,7 +14,7 @@ Public Class frmAutores
 
     End Sub
 
-    Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
+    Private Sub btnInsertar_Click(sender As Object, e As EventArgs)
 
         Try
             Dim miAut As New AutorEN()
@@ -35,7 +35,7 @@ Public Class frmAutores
         End Try
     End Sub
 
-    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs)
         txtCodAutor.Clear()
         cbxNacionalidad.Text = ""
         txtNombre.Clear()
@@ -66,7 +66,7 @@ Public Class frmAutores
         End Try
     End Sub
 
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs)
         Try
             Dim miAut As New AutorEN()
             miAut.CodAutor = txtCodAutor.Text
@@ -90,7 +90,7 @@ Public Class frmAutores
         btnBorrar.Enabled = False
     End Sub
 
-    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs)
 
         Try
             Dim miAut As New AutorEN()

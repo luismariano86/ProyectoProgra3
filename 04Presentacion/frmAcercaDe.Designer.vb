@@ -145,6 +145,7 @@ Partial Class frmAcercaDe
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAceptar)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "frmAcercaDe"
         Me.Text = "Acerca de..."
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

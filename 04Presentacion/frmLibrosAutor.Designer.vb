@@ -73,6 +73,7 @@ Partial Class frmLibrosAutor
         Me.ClientSize = New System.Drawing.Size(292, 246)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "frmLibrosAutor"
         Me.Text = "Libros por Autor"
         Me.GroupBox1.ResumeLayout(False)

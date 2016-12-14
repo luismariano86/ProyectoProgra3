@@ -109,6 +109,7 @@ Partial Class frmPrestamoFechas
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "frmPrestamoFechas"
         Me.Text = "Prestamos por Fechas"
         Me.GroupBox1.ResumeLayout(False)

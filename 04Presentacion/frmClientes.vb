@@ -125,7 +125,7 @@ Public Class frmClientes
         btnBorrar.Enabled = False
     End Sub
 
-    Private Sub btnLimpiarCampos_Click(sender As Object, e As EventArgs) Handles btnLimpiarCampos.Click
+    Private Sub btnLimpiarCampos_Click(sender As Object, e As EventArgs) 
         txtCedula.Clear()
         txtTelefono.Clear()
         txtNombre.Clear()
@@ -137,7 +137,7 @@ Public Class frmClientes
 
     End Sub
 
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) 
         Me.Close()
     End Sub
 
@@ -146,7 +146,7 @@ Public Class frmClientes
         btnBorrar.Enabled = False
     End Sub
 
-    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) 
         Dim Pantalla As New frmReportes
         Dim Reporte As New rptListaClientes
         Dim dstDatosReporte As New DataSet
