@@ -32,6 +32,7 @@ Partial Class frmAcercaDe
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -130,11 +131,21 @@ Partial Class frmAcercaDe
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Didier Chavarria"
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(19, 323)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(377, 13)
+        Me.Label6.TabIndex = 10
+        Me.Label6.Text = "Derechos Reservados por los Compas que hicieron el programa, Heredia 2016"
+        '
         'frmAcercaDe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(538, 345)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.PictureBox2)
@@ -165,4 +176,5 @@ Partial Class frmAcercaDe
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
 End Class

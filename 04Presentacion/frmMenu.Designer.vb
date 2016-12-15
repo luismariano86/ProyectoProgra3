@@ -188,7 +188,6 @@ Partial Class frmMenu
         '
         'tsbtnAutores
         '
-        Me.tsbtnAutores.Image = Global._04Presentacion.My.Resources.Resources.Autor
         Me.tsbtnAutores.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbtnAutores.Name = "tsbtnAutores"
         Me.tsbtnAutores.Size = New System.Drawing.Size(52, 35)
@@ -197,7 +196,6 @@ Partial Class frmMenu
         '
         'tsbtnLibros
         '
-        Me.tsbtnLibros.Image = Global._04Presentacion.My.Resources.Resources.buscalibro
         Me.tsbtnLibros.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbtnLibros.Name = "tsbtnLibros"
         Me.tsbtnLibros.Size = New System.Drawing.Size(43, 35)
@@ -211,7 +209,6 @@ Partial Class frmMenu
         '
         'tsbtnDevolucion
         '
-        Me.tsbtnDevolucion.Image = Global._04Presentacion.My.Resources.Resources.devolucion
         Me.tsbtnDevolucion.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbtnDevolucion.Name = "tsbtnDevolucion"
         Me.tsbtnDevolucion.Size = New System.Drawing.Size(71, 35)
@@ -220,7 +217,6 @@ Partial Class frmMenu
         '
         'tsbtnPrestamo
         '
-        Me.tsbtnPrestamo.Image = Global._04Presentacion.My.Resources.Resources.Libros
         Me.tsbtnPrestamo.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbtnPrestamo.Name = "tsbtnPrestamo"
         Me.tsbtnPrestamo.Size = New System.Drawing.Size(66, 35)
@@ -234,7 +230,6 @@ Partial Class frmMenu
         '
         'ToolStripButton1
         '
-        Me.ToolStripButton1.Image = Global._04Presentacion.My.Resources.Resources.clientes
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(53, 35)
@@ -243,7 +238,6 @@ Partial Class frmMenu
         '
         'tsbtnUsuarios
         '
-        Me.tsbtnUsuarios.Image = Global._04Presentacion.My.Resources.Resources.usuarios
         Me.tsbtnUsuarios.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tsbtnUsuarios.Name = "tsbtnUsuarios"
         Me.tsbtnUsuarios.Size = New System.Drawing.Size(56, 35)
